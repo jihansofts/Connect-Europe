@@ -9,7 +9,7 @@ const navItem = [
   { name: "About", link: "/about" },
   { name: "Get An Employee", link: "/get-an-employee" },
   { name: "Get HR Advice", link: "/get-hr-advice" },
-  { name: "HR Blog", link: "/hr-blog" },
+  // { name: "HR Blog", link: "/hr-blog" },
   { name: "Reference", link: "/reference" },
   { name: "Contact", link: "/contact" },
 ];

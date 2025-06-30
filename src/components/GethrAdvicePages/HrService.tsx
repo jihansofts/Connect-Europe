@@ -1,4 +1,5 @@
 "use client";
+import AboutBanner from "@/common/AboutBanner";
 import ServiceSection from "@/common/ServiceSection";
 import React from "react";
 
@@ -30,43 +31,37 @@ export default function HrService() {
     requestAnimationFrame(animateScroll);
   };
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-20 px-5">
       <div className="container max-w-7xl mx-auto">
-        <ul className="flex justify-center space-x-10">
-          <li className="text-[22px] text-primary hover:underline cursor-pointer">
-            <button
-              className="hover:underline cursor-pointer"
-              onClick={() => smothScroll("HR-consultancy", 1000)}>
-              HR consultancy
-            </button>
-          </li>
-          <li className="text-[22px] text-primary hover:underline cursor-pointer">
-            <button
-              className="hover:underline cursor-pointer"
-              onClick={() => smothScroll("Staff-audit", 1000)}>
-              Staff audit
-            </button>
-          </li>
-          <li className="text-[22px] text-primary ">
-            <button
-              className="hover:underline cursor-pointer"
-              onClick={() => smothScroll("HR-marketing", 1000)}>
-              HR marketing
-            </button>
-          </li>
+        <ul className="flex flex-nowrap overflow-x-auto pb-2 space-x-6 px-4 md:flex-wrap md:justify-center md:overflow-x-visible md:space-x-10">
+          {[
+            { id: "HR-consultancy", label: "HR consultancy" },
+            { id: "Staff-audit", label: "Staff audit" },
+            { id: "HR-marketing", label: "HR marketing" },
+            { id: "Education", label: "Education" },
+            { id: "Succession", label: "Succession" },
+            { id: "Salary-survey", label: "Salary survey" },
+          ].map((item) => (
+            <li key={item.id} className="flex-shrink-0 md:flex-shrink">
+              <button
+                className="text-lg md:text-[22px] text-primary hover:underline whitespace-nowrap"
+                onClick={() => smothScroll(item.id, 1000)}>
+                {item.label}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
-      <div className="container  mx-auto">
+      <div className="container mx-auto">
         <ServiceSection
           id="HR-consultancy"
-          title="HR-consultancy"
+          title="HR consultancy"
           subtitle="Service"
-          imageSrc="/images/service1.jpg"
-          reverse // ⬅️ Image on the right
+          imageSrc="/images/service3.jpg"
           paragraphs={[
-            "We will provide you with suitable candidates for key positions without costing you a lot of time and energy. Our recruitment process is designed to ensure that you, the client, get the best talent for your organisation.",
-            "We start by thoroughly understanding your recruitment needs, including job requirements, qualifications and required skills. We will then use our extensive network and various search methods to source qualified candidates. Our consultants will then carefully review and assess each candidate’s experience, expertise, qualities and motivation. We’ll provide you with a curated list of the best candidates, along with comprehensive profiles and recommendations to help you make the right decisions.",
-            "We ensure open and transparent communication throughout the process, keeping you informed of progress and working closely with you to successfully fill your vacancies",
+            "Make the most of your employees’ potential with our expert human resources consultancy services. With over 16 years in the HR industry, our team of human resources professionals is equipped with the knowledge and experience to help your company compete in the job market.",
+            "Our human resources consulting services are designed to meet your company’s unique needs. Through our consultants, we provide you with comprehensive human resources solutions that align with your business objectives. The scope of our consulting services ranges from strategic workforce planning, recruitment/selection/adaptation to talent acquisition and retention, employee engagement, performance management and more.",
+            "HR outsourcing is an important part of our HR services. In this case, even a smaller company can get the benefits of a top external HR manager under favourable financial conditions.",
           ]}
           expandableContent={[
             "Building a team from the ground up is a difficult task. As with all our services, we create a turnkey solution. We use all professional procedures and methodologies sensitively, according to experience and taking into account the current situation.",
@@ -78,27 +73,79 @@ export default function HrService() {
           id="Staff-audit"
           title="Staff audit"
           subtitle="Service"
-          imageSrc="/images/service2.jpg"
+          imageSrc="/images/Staffaudit.jpg"
+          reverse
           paragraphs={[
-            "Headhunting, or executive search, is a specialist consultancy service for the highly effective identification, sourcing and attraction of top talent. We’ll find, reach out and get you the professionals with the experience and quality you need to bring the value you need.When it comes to finding the best talent for your organization, sometimes the traditional recruitment process just doesn’t cut it. This is where headhunting services come in. Our team of experienced headhunters have a proven track record of finding, approaching and recruiting top talent who are not actively seeking new opportunities.",
-            "With our extensive network of contacts and our in-depth knowledge of the industry, we can find the right person for even the most challenging assignments. We take the time to understand your business, culture and recruitment needs so we can find candidates who not only have the right skills and experience, but also those who are the right fit for your team. Plus, our confidential approach ensures that your search remains discreet and you only pay for success. Let us help you find the best talent for your organization with our headhunting services. Contact us today to find out more.",
+            "Objective view through human resources audit ‍Human resourcesaudit is an effective and efficient form of collecting valuable information about your employees, which you can then use effectively in the development of your human resources and in the optimization and standardization of processes in your company.",
+            "HR audit answers a variety of questions ‍Humanresources are the most valuable resource in your business. Effective use of human resources brings about the development of the company and thus limits the failure of your business because people are not machines. Mapping processes, managing effectively, setting up communication flows, delegating authority and determining responsibilities and accountabilities is a fundamental problem for many organizations, especially as you transition from different stages of your company’s development.",
           ]}
           showMoreInfoButton={false}
+          expandableContent={[
+            "Staff audit and its process The basis of our professional and personal assessment of the individual participants in the audit. This usually starts with structured face-to-face interviews conducted by our HR consultants, experts in HR auditing. The essence is to solve the specific task and problems characteristic of each job. A dynamic method of personnel audit is the Assessment Centre or Development Centre, where you get qualified feedback on your employees in modelled real-life situations. Take advantage of our many years of experience in getting to know your employees through HR audits and discover their true potential.",
+          ]}
         />
         <ServiceSection
           id="HR-marketing"
           title="HR marketing"
           subtitle="Service"
-          imageSrc="/images/service3.jpg"
-          reverse //
+          imageSrc="/images/HRMarketing.jpg"
           paragraphs={[
-            "We will provide you with an expert who will bring high efficiency to your processes. An interim manager is a person who temporarily becomes part of your company. You can hire an interim manager to deal with changes, new projects, strategic tasks or unpopular moves. This professional is highly qualified, has a range of work experience and has completed a wide variety of projects. The interim manager does not need adaptation, he/she solves the entrusted tasks immediately.",
-            "If your organisation is facing a significant change that requires the rapid involvement of an experienced manager, an interim service is the solution you need. Our team of interim managers has extensive experience in leading organisations through periods of change and transformation. Whether you need a CEO, CFO, CMO, or any other leadership position, we can provide you with an interim manager. He/she will have the skills, experience and expertise to engage immediately in processes and deliver results.",
-            "With our flexible service model, you can use an interim manager for as long as you need, whether that’s a few weeks, months or longer. We take the time to understand your business, culture and goals so that we can provide you with an interim manager that will be a good fit for your organization. Let us help you navigate change and achieve results with our interim management services.",
+            "In today’s competitive business environment, attracting and retaining top talent is critical. HR marketing will help bring your brand, culture and values to potential employees, making it easier to attract the right candidates. By using HR marketing, you build a strong brand and a good name on the job market.",
+            "HR marketing can help you retain your best employees.",
+            "HR marketing is becoming a key component of any successful company. By investing in HR marketing initiatives, you can attract and retain top talent.",
+            "We have the recipe for setting up effective HR marketing.",
           ]}
           showMoreInfoButton={false}
         />
+
+        <ServiceSection
+          id="Education"
+          title="Education"
+          subtitle="Service"
+          imageSrc="/images/Education.jpg"
+          paragraphs={[
+            "Unlock the full potential of your team through training. For several years we have been a trusted partner for our clients in the development of communication skills, management skills, sales skills and personal development of their employees.",
+            "We specialise in delivering comprehensive and results-focused learning programmes (training) in key areas of professional development. We have a team of experienced trainers who are dedicated to giving your team the skills you need to make your company a long-term success.",
+            "Communication Skills – Effective communication is the foundation of any successful organisation today. During our trainings we focus not only on improving communication skills but also active listening, conflict resolution and presentation skills. We provide actionable techniques to help your team communicate openly and clearly, increasing their ability to collaborate, negotiate and build meaningful relationships with clients, colleagues and business partners.",
+          ]}
+          reverse
+          showMoreInfoButton={false}
+          expandableContent={[
+            "HR training – our portfolio of training activities also includes comprehensive training programmes for HR professionals including recruiters, headhunters, HRBPs and recruiters. Our tailored training covers key areas of HR services such as talent acquisition, recruitment strategies, candidate assessment, headhunting techniques, onboarding and new hire onboarding and internal communications.",
+            "Management skills – leadership and management skills are critical to managing team performance and achieving the organization’s goals. Our targeted leadership training focuses on core management competencies such as strategic planning, decision making, team building, performance management and change management. We provide practical tools, frameworks and case studies to help your team develop effective leadership styles and motivate your direct reports, leading to improved team performance and productivity.",
+            "Sales skills – in today’s competitive business environment, mastering effective sales techniques is essential for business success. Our training programs focus on building basic sales skills such as prospecting, relationship building, negotiating, objection resolution and closing deals. We provide practical strategies, role-playing exercises and real-life scenarios to hone your team’s sales skills.",
+            "In addition to these topics, our consultants provide coaching and personal development services for your employees.",
+          ]}
+        />
+        <ServiceSection
+          id="Succession"
+          title="Succession"
+          subtitle="Service"
+          imageSrc="/images/Succession.jpg"
+          paragraphs={[
+            "Succession planning is one of the most important aspects of a successful business. It is the process of identifying and developing employees with the potential to fill key leadership positions in the company. By identifying and preparing potential successors early, the company can ensure continuity in leadership, mitigating the risk associated with sudden unwanted departures. A succession programme is an investment in the future because it promotes loyalty and commitment among key employees and is a tool to attract new talent to the company.",
+            "Based on our years of experience, succession planning should be a top priority for any company that wants to succeed in the long term.",
+          ]}
+          showMoreInfoButton={false}
+        />
+        <ServiceSection
+          id="Salary-survey"
+          title="Salary survey"
+          subtitle="Service"
+          imageSrc="/images/Salarysurvey.jpg"
+          paragraphs={[
+            "Our professional services include salary surveys for various positions. If you need to get an overview of how employees are evaluated in a specific position, for example at a competitor, or if you need to set a salary for a new position in your company with which you have no experience, we will provide you with an overview based on our knowledge of the market, our internal data supplemented with data from relevant external sources.",
+          ]}
+          reverse
+          showMoreInfoButton={false}
+        />
       </div>
+      <AboutBanner
+        image="/images/manager..jpg"
+        title="Ing. Miriam Krpelánová"
+        subtitle="MANAGING DIRECTOR | HEAD OF CONSULTING"
+        desc="I started my working career in education. I have been actively involved in Human Resources for the last 5 years."
+      />
     </section>
   );
 }
