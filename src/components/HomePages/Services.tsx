@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import SCard from "@/common/SCard";
 
@@ -64,13 +65,13 @@ export default function Services() {
           <div>
             <ul className="text-white text-[24px] font-sans space-y-5 upperCase text-end">
               <li className=" uppercase hover:underline cursor-pointer">
-                Recruiting
+                <Link href="/get-an-employee/#Recruiting">RECRUITING</Link>
               </li>
               <li className=" uppercase hover:underline cursor-pointer">
-                Headhunting
+                <Link href="/get-an-employee/#Headhunting">Headhunting</Link>
               </li>
               <li className=" uppercase hover:underline cursor-pointer">
-                Interim Management
+                <Link href="/get-an-employee/#Interim">Interim Management</Link>
               </li>
             </ul>
           </div>
@@ -86,13 +87,13 @@ export default function Services() {
           <div>
             <ul className="text-white text-[24px] font-sans space-y-5 upperCase text-start">
               <li className=" uppercase hover:underline cursor-pointer">
-                HR Marketing
+                <Link href="/get-hr-advice/#HR-consultancy">HR Marketing</Link>
               </li>
               <li className=" uppercase hover:underline cursor-pointer">
-                HR Advisory
+                <Link href="/get-hr-advice/#HR-marketing">HR ADVISORY</Link>
               </li>
               <li className=" uppercase hover:underline cursor-pointer">
-                Education
+                <Link href="/get-hr-advice/#Education">Education</Link>
               </li>
             </ul>
           </div>
@@ -119,9 +120,11 @@ export default function Services() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <button className="border  border-white text-white hover:bg-heading hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans mt-10">
-              Other Services
-            </button>
+            <Link
+              href="/reference"
+              className="border  border-white text-white hover:bg-heading hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans mt-10">
+              Other Reference
+            </Link>
           </div>
         </div>
       </div>

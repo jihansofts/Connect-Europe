@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { useInputModel } from "@/context/ModelContext";
 
 const Images = [
   "/brand1.png",
@@ -20,6 +22,7 @@ const Images = [
   "/brand16.png",
 ];
 export default function Brand() {
+  const { openModel } = useInputModel();
   return (
     <div className="bg-white mx-auto px-5 py-20 container max-w-7xl">
       <div className="grid grid-cols-1  justify-center gap-5 items-center md:grid-cols-4 lg:grid-cols-6">
@@ -35,7 +38,7 @@ export default function Brand() {
         ))}
       </div>
       <div className="flex justify-center items-center mt-10">
-        <button className="border border-heading text-heading hover:bg-heading hover:text-white hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans">I Need An Employee</button>
+        <button onClick={openModel} className="border border-heading text-heading hover:bg-heading hover:text-white hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans">I Need An Employee</button>
       </div>
     </div>
   );

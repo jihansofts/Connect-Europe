@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
-
+import { useInputModel } from "@/context/ModelContext";
 export default function Hero() {
+  const { openModel } = useInputModel();
+
   return (
     <section className="bg-primary py-10">
       <div className="mx-auto max-w-7xl">
@@ -21,7 +24,9 @@ export default function Hero() {
             others do not
           </p>
           <div className="flex justify-center mt-5">
-            <button className="border border-white text-white hover:bg-heading hover:border-heading cursor-pointer duration-200 uppercase px-10 py-3 font-semibold rounded font-sans">
+            <button
+              onClick={openModel}
+              className="border border-white text-white hover:bg-heading hover:border-heading cursor-pointer duration-200 uppercase px-10 py-3 font-semibold rounded font-sans">
               i need an employee
             </button>
           </div>
