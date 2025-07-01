@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { useInputModel } from "@/context/ModelContext";
 import React, { useState } from "react";
+import Link from "next/link";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
@@ -16,6 +18,7 @@ type ServiceSectionProps = {
   imageAlt?: string;
   showMoreInfoButton?: boolean;
   reverse?: boolean;
+  hideButton?: boolean;
 };
 
 const ServiceSection: React.FC<ServiceSectionProps> = ({
@@ -27,9 +30,12 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
   imageSrc,
   imageAlt = "Service Image",
   showMoreInfoButton = true,
+  hideButton = false,
   reverse = false,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const { openModel } = useInputModel();
 
   return (
     <section id={id} className="w-full px-6 py-12 md:py-20 max-w-7xl mx-auto">
@@ -42,9 +48,11 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
           <h4 className="text-lg font-medium text-gray-500">{subtitle}</h4>
           <h2 className="text-4xl font-bold text-heading mb-6">{title}</h2>
           {paragraphs.map((text, i) => (
-            <p key={i} className="text-gray-700 mb-4 leading-relaxed">
-              {text}
-            </p>
+            <p
+              key={i}
+              className="text-gray-700 mb-4 leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
           ))}
 
           {/* Expandable content section */}
@@ -83,15 +91,24 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
           {/* Buttons */}
           <div className="mt-6 flex flex-wrap gap-4">
             {showMoreInfoButton && (
-              <button className="border-2 border-primary text-primary px-6 py-3 rounded-md font-semibold hover:bg-primary hover:text-white transition-all">
+              <Link
+                href="/recruiting"
+                className="border-2 border-primary text-primary px-6 py-3 rounded-md font-semibold hover:bg-primary hover:text-white transition-all">
                 MORE INFORMATION
-              </button>
+              </Link>
             )}
 
-            <button className="bg-primary hover:bg-heading cursor-pointer text-white px-6 py-3 rounded-md font-semibold transition-all">
-              {" "}
-              I AM INTERESTED
-            </button>
+            {
+              // Hide the button if hideButton is true
+              !hideButton && (
+                <button
+                  onClick={openModel}
+                  className="bg-primary hover:bg-heading cursor-pointer text-white px-6 py-3 rounded-md font-semibold transition-all">
+                  {" "}
+                  I AM INTERESTED
+                </button>
+              )
+            }
           </div>
         </div>
 

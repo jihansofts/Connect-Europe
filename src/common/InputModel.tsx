@@ -77,7 +77,7 @@ export default function InputModal() {
             type="text"
             name="name"
             placeholder="Name"
-            className="w-full border px-4 py-2 rounded"
+            className="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:primary "
             onChange={handleChange}
             required
           />
@@ -85,7 +85,7 @@ export default function InputModal() {
             type="email"
             name="email"
             placeholder="Email"
-            className="w-full border px-4 py-2 rounded"
+            className="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:primary "
             onChange={handleChange}
             required
           />
@@ -93,7 +93,7 @@ export default function InputModal() {
             type="text"
             name="phone"
             placeholder="Phone"
-            className="w-full border px-4 py-2 rounded"
+            className="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:primary "
             onChange={handleChange}
           />
           {/* Hide report if last tab (Looking for work) */}
@@ -102,7 +102,7 @@ export default function InputModal() {
             <textarea
               name="report"
               placeholder="Report"
-              className="w-full border px-4 py-2 rounded h-24"
+              className="w-full border px-4 py-2 rounded h-24 focus:outline-none focus:ring-2 focus:ring-primary focus:primary"
               onChange={handleChange}
             />
           )}
