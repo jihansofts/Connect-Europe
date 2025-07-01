@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Menu, X, ChevronRight } from "lucide-react";
@@ -34,9 +35,11 @@ export default function Navbar() {
             className="cursor-pointer"
           />
         </Link>
-        <button className="border border-white px-10 py-2 hover:bg-heading hover:border-heading cursor-pointer duration-200  text-white rounded">
+        <Link
+          href="/contact"
+          className="border border-white px-10 py-2 hover:bg-heading hover:border-heading cursor-pointer duration-200  text-white rounded">
           Contact
-        </button>
+        </Link>
       </div>
 
       {/* Sidebar */}
@@ -73,7 +76,8 @@ export default function Navbar() {
                     <li key={index}>
                       <Link
                         href={item.link}
-                        className="text-base font-medium text-white hover:text-heading">
+                        onClick={() => setOpen(false)}
+                        className="text-xl font-bold text-white hover:text-heading">
                         {item.name}
                         <ChevronRight className="inline ml-2" />
                       </Link>

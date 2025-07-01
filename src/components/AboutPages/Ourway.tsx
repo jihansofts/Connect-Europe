@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useInputModel } from "@/context/ModelContext";
 
 interface Datatype {
   title: string;
@@ -27,6 +29,7 @@ const data: Datatype[] = [
   },
 ];
 export default function Ourway() {
+  const { openModel } = useInputModel();
   return (
     <section className=" bg-white py-20 px-5">
       <div className="max-w-7xl mx-auto">
@@ -60,9 +63,13 @@ export default function Ourway() {
           <p className="text-gray-600 text-start mt-3 mx-auto">
             Your new employees are closer than you think!
           </p>
-          <button className="border border-heading text-heading hover:bg-heading hover:text-white hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans mt-5">
-            I need an employee
-          </button>
+          <div className="text-center">
+            <button
+              onClick={openModel}
+              className="border border-heading  text-heading hover:bg-heading hover:text-white hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans mt-5">
+              I need an employee
+            </button>
+          </div>
         </div>
       </div>
     </section>

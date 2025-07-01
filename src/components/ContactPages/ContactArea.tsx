@@ -113,17 +113,23 @@ export default function ContactArea() {
               <h2 className="text-[24px] font-semibold text-heading ">
                 Contact information
               </h2>
-              <p className="text-[16px] text-gray-600">
+              {/* <p className="text-[16px] text-gray-600">
                 Killary Janunkova 2 | Banská Bystrica | 97401 | Slovakia
-              </p>
-              <address className="not-italic text-primary cursor-pointer space-y-1 mt-20 ">
-                <p>+421 947 901 800</p>
-                <p>trigon@trigon-conatting.sk</p>
+              </p> */}
+              <address className="not-italic  cursor-pointer space-y-1 mt-20 ">
+                <p className="text-heading font-bold text-[20px]">
+                  📧 Get in Touch by Email
+                </p>
+                <a
+                  href="mailto:contact@connecteurope.agency"
+                  className="text-[20px] text-primary">
+                  contact@connecteurope.agency
+                </a>
               </address>
             </div>
 
             {/* Invoicing Data */}
-            <div className="mt-20">
+            {/* <div className="mt-20">
               <h2 className="text-[24px] font-semibold text-heading ">
                 Invoicing data
               </h2>
@@ -143,7 +149,7 @@ export default function ContactArea() {
                   <span className="font-bold">IČO:</span> 43932282
                 </p>
               </div>
-            </div>
+            </div> */}
             <div className="flex items-center gap-4">
               <div className="p-5 bg-primary rounded-full hover:bg-heading duration-200 cursor-pointer w-8 h-8 flex items-center justify-center">
                 <span className="">
