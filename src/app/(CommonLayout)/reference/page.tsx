@@ -1,7 +1,7 @@
 import HeroBanner from "@/common/HeroBanner";
-import BannerCount from "@/components/Reference/BannerCount";
-import BrandAds from "@/components/Reference/BrandAds";
-import TestimonialSection from "@/components/Reference/TestimonialSection";
+import BannerCount from "@/components/ReferencePages/BannerCount";
+import BrandAds from "@/components/ReferencePages/BrandAds";
+import TestimonialSection from "@/components/ReferencePages/TestimonialSection";
 import React from "react";
 
 export default function page() {

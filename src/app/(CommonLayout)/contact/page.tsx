@@ -1,6 +1,6 @@
-import Contact from "@/components/Contact/Contact";
-import ContactArea from "@/components/Contact/ContactArea";
-import MapArea from "@/components/Contact/MapArea";
+import Contact from "@/components/ContactPages/Contact";
+import ContactArea from "@/components/ContactPages/ContactArea";
+import MapArea from "@/components/ContactPages/MapArea";
 import React from "react";
 
 export default function page() {

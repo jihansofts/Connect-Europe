@@ -116,7 +116,7 @@ const data: TestimonialCardProps[] = [
     positions: ["Sustainability Analyst", "Eco Consultant", "CSR Officer"],
   },
 ];
-  
+
 export default function TestimonialSection() {
   return (
     <section className="bg-white py-20">
