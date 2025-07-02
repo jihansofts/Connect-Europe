@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useMotionValueEvent,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 
 const timeline = [
@@ -15,7 +10,6 @@ const timeline = [
   { year: 2015, text: "The largest personnel agency..." },
   { year: 2018, text: "Significant expansion of the consultants..." },
 ];
-
 
 export default function Timeline() {
   const ref = useRef(null);
@@ -27,9 +21,6 @@ export default function Timeline() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   // ✅ Debug scrollYProgress (between 0 and 1)
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("scrollYProgress:", latest.toFixed(3));
-  });
 
   return (
     <div className="relative max-w-5xl mx-auto mt-10 min-h-[120vh]" ref={ref}>

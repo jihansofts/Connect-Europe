@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 interface TeamMember {
   name: string;
@@ -62,57 +65,97 @@ const teamMembers: TeamMember[] = [
   },
 ];
 
+// Animation variants
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export default function Team() {
   return (
     <section className="bg-white py-20 px-5">
       <div className="container mx-auto max-w-5xl">
-        <h1 className="text-[48px] font-bold text-center text-heading font-sans">
-          Read more about our colleagues
-        </h1>
-        <p className="text-gray-600 font-normal text-start mt-5 font-sans text-[16px]">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}>
+          <h1 className="text-[48px] font-bold text-center text-heading font-sans">
+            Read more about our colleagues
+          </h1>
+        </motion.div>
+
+        <motion.p
+          className="text-gray-600 font-normal text-start mt-5 font-sans text-[16px]"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}>
           Expertise is the fundamental pillar on which our company stands and
           also what our partners can rely on 100%. Expertise is what we pride
           ourselves on and continually develop in our consultants.
-        </p>
+        </motion.p>
       </div>
+
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 mt-10">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 mt-10"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}>
           {teamMembers.map((member, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={cardVariants}
               className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-              {/* Team Member Image with hover effect */}
+              {/* Image */}
               <div className="relative h-[400px]">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover transition-all cursor-pointer duration-500 group-hover:opacity-100 "
+                  className="object-cover transition-all cursor-pointer duration-500 group-hover:opacity-100"
                 />
-
-                {/* Overlay with social icons */}
-                <div className="absolute inset-0  bg-opacity-75 transition-all duration-300 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 group-hover:bg-black/50 ">
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-opacity-75 transition-all duration-300 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 group-hover:bg-black/50">
                   <div className="flex absolute bottom-0">
-                    <a href={member.linkedin} className="text-white  p-3 ">
+                    <a href={member.linkedin} className="text-white p-3">
                       <Linkedin size={20} />
                     </a>
                     <a
                       href={`mailto:${member.email}`}
-                      className="text-white  p-3 ">
+                      className="text-white p-3">
                       <Mail />
                     </a>
                   </div>
                 </div>
               </div>
 
-              {/* Team Member Info */}
+              {/* Info */}
               <div className="bg-white p-6 text-center">
                 <h3 className="text-xl font-bold">{member.name}</h3>
                 <p className="text-gray-600 mt-2">{member.role}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

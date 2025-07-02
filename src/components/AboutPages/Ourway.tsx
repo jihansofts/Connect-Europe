@@ -1,11 +1,13 @@
 "use client";
 import React from "react";
 import { useInputModel } from "@/context/ModelContext";
+import { motion, Variants } from "framer-motion";
 
 interface Datatype {
   title: string;
   desc: string;
 }
+
 const data: Datatype[] = [
   {
     title: "The origin of TRIGON",
@@ -28,30 +30,87 @@ const data: Datatype[] = [
     desc: "We have launched a model of external consultants. We have a team of experienced recruiters who can help companies with their recruitment needs thanks to our proven processes and experience. We cover the whole of Slovakia and we can be closer to you, our clients.",
   },
 ];
+
+// Animation variants
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 export default function Ourway() {
   const { openModel } = useInputModel();
-  return (
-    <section className=" bg-white py-20 px-5">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-heading mb-6">
-          Our way of working
-        </h1>
 
-        {data.map((item, index) => (
-          <div key={index} className="max-w-3xl mx-auto  mt-16">
-            <h5 className="text-primary text-2xl font-bold">{item.title}</h5>
-            <p className="text-gray-600 text-start mt-3">{item.desc}</p>
-          </div>
-        ))}
+  return (
+    <section className="bg-white py-20 px-5">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Heading */}
+        <motion.h1
+          className="text-4xl md:text-5xl font-bold text-center text-heading mb-6"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}>
+          Our way of working
+        </motion.h1>
+
+        {/* Timeline blocks */}
+        <motion.div
+          className=""
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}>
+          {data.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="max-w-3xl mx-auto mt-16">
+              <h5 className="text-primary text-2xl font-bold">{item.title}</h5>
+              <p className="text-gray-600 text-start mt-3">{item.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
+
+      {/* Final Section */}
       <div className="max-w-7xl mx-auto mt-20">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-heading ">
+        <motion.h1
+          className="text-4xl md:text-5xl font-bold text-center text-heading"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}>
           We are close to you
-        </h1>
-        <p className="text-gray-600 text-center font-bold mt-3">
+        </motion.h1>
+
+        <motion.p
+          className="text-gray-600 text-center font-bold mt-3"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}>
           We are a 100% Slovak recruitment agency
-        </p>
-        <div className="max-w-3xl mx-auto  mt-16">
+        </motion.p>
+
+        <motion.div
+          className="max-w-3xl mx-auto mt-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.7 }}>
           <p className="text-gray-600 text-start mt-3">
             Thanks to our network of senior consultants, we serve the whole of
             Slovakia. In addition to the company headquarters in Banská
@@ -60,17 +119,19 @@ export default function Ourway() {
             of industries and can successfully fill different types of
             positions. We will find you the best candidates in your region.
           </p>
-          <p className="text-gray-600 text-start mt-3 mx-auto">
+          <p className="text-gray-600 text-start mt-3">
             Your new employees are closer than you think!
           </p>
           <div className="text-center">
-            <button
+            <motion.button
               onClick={openModel}
-              className="border border-heading  text-heading hover:bg-heading hover:text-white hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans mt-5">
+              className="border border-heading text-heading hover:bg-heading hover:text-white hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans mt-5"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}>
               I need an employee
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

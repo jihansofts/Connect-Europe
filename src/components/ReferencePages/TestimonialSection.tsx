@@ -1,5 +1,7 @@
+"use client";
 import TestimonialCard from "@/common/TestimonialCard";
 import { TestimonialCardProps } from "@/types/types";
+import { motion, Variants } from "framer-motion";
 import React from "react";
 
 const data: TestimonialCardProps[] = [
@@ -118,14 +120,38 @@ const data: TestimonialCardProps[] = [
 ];
 
 export default function TestimonialSection() {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
   return (
     <section className="bg-white py-20">
       <div className="container mx-auto w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}>
           {data.map((card, idx) => (
-            <TestimonialCard key={idx} {...card} />
+            <motion.div key={idx} variants={cardVariants}>
+              <TestimonialCard {...card} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

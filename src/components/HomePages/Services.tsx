@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import SCard from "@/common/SCard";
 
 const testimonialData = [
@@ -50,6 +50,18 @@ const testimonialData = [
   },
 ];
 export default function Services() {
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.6,
+        ease: [0.4, 0, 0.2, 1],
+      },
+    }),
+  };
   return (
     <section className="bg-primary py-20 px-5">
       <div className="container mx-auto">
@@ -109,14 +121,20 @@ export default function Services() {
 
           <div className="grid max-w-7xl gap-5 justify-center items-center mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10">
             {testimonialData.map((item, index) => (
-              <SCard
+              <motion.div
                 key={index}
-                quote={item.quote}
-                name={item.name}
-                position={item.position}
-                logo={item.logo}
-                bgImage={item.bgImage}
-              />
+                custom={index}
+                initial="hidden"
+                animate="visible"
+                variants={cardVariants}>
+                <SCard
+                  quote={item.quote}
+                  name={item.name}
+                  position={item.position}
+                  logo={item.logo}
+                  bgImage={item.bgImage}
+                />
+              </motion.div>
             ))}
           </div>
           <div className="text-center mt-10">

@@ -5,7 +5,7 @@ import { useInputModel } from "@/context/ModelContext";
 import React, { useState } from "react";
 import Link from "next/link";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
 
 type ServiceSectionProps = {
@@ -13,12 +13,22 @@ type ServiceSectionProps = {
   title: string;
   subtitle: string;
   paragraphs: string[];
-  expandableContent?: string[]; // New prop for expandable content
+  expandableContent?: string[];
   imageSrc: string;
   imageAlt?: string;
   showMoreInfoButton?: boolean;
   reverse?: boolean;
   hideButton?: boolean;
+};
+
+const textVariants: Variants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const imageVariants: Variants = {
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
 const ServiceSection: React.FC<ServiceSectionProps> = ({
@@ -34,7 +44,6 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
   reverse = false,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-
   const { openModel } = useInputModel();
 
   return (
@@ -44,7 +53,12 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
           reverse ? "lg:[direction:rtl]" : ""
         }`}>
         {/* Text Content */}
-        <div className={`${reverse ? "lg:[direction:ltr]" : ""}`}>
+        <motion.div
+          className={`${reverse ? "lg:[direction:ltr]" : ""}`}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={textVariants}>
           <h4 className="text-lg font-medium text-gray-500">{subtitle}</h4>
           <h2 className="text-4xl font-bold text-heading mb-6">{title}</h2>
           {paragraphs.map((text, i) => (
@@ -55,7 +69,7 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
             />
           ))}
 
-          {/* Expandable content section */}
+          {/* Expandable content */}
           {expandableContent && (
             <div className="mb-6">
               <button
@@ -98,24 +112,23 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
               </Link>
             )}
 
-            {
-              // Hide the button if hideButton is true
-              !hideButton && (
-                <button
-                  onClick={openModel}
-                  className="bg-primary hover:bg-heading cursor-pointer text-white px-6 py-3 rounded-md font-semibold transition-all">
-                  {" "}
-                  I AM INTERESTED
-                </button>
-              )
-            }
+            {!hideButton && (
+              <button
+                onClick={openModel}
+                className="bg-primary hover:bg-heading cursor-pointer text-white px-6 py-3 rounded-md font-semibold transition-all">
+                I AM INTERESTED
+              </button>
+            )}
           </div>
-        </div>
+        </motion.div>
 
         {/* Image */}
-        <div className="self-start">
-          {" "}
-          {/* Add self-start here */}
+        <motion.div
+          className="self-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={imageVariants}>
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <Image
               src={imageSrc}
@@ -125,7 +138,7 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
               className="object-cover w-full h-full"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
