@@ -10,27 +10,35 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   company,
 }) => {
   return (
-    <div className="border border-primary rounded-2xl p-6 bg-white shadow-md flex flex-col gap-4 w-full max-w-md sm:max-w-lg lg:max-w-full ">
-      <div className="flex flex-col sm:flex-row py-6 sm:py-10 gap-4 sm:gap-0 items-start sm:items-center justify-between">
-        <Image
-          src={companyLogo}
-          alt={`${company} logo`}
-          width={100}
-          height={20}
-          className="h-12 w-32 object-contain"
-        />
-        <p className="text-sm italic text-gray-500 max-w-full sm:max-w-xs">
+    <div className="lg:w-full lg:min-h-[300px] md:h-auto sm:h-auto h-full md:w-full sm:w-full w-[350px] border border-primary rounded-2xl p-6 bg-white shadow-md flex flex-col gap-4">
+      {/* Top section: logo + quote */}
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start sm:items-center justify-between">
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          <Image
+            src={companyLogo}
+            alt={`${company} logo`}
+            width={100}
+            height={40}
+            className="h-12 w-32 object-contain"
+          />
+        </div>
+
+        {/* Quote */}
+        <p className="text-sm italic text-gray-500 sm:text-right w-full break-words">
           {`"${quote}"`}
         </p>
       </div>
 
+      {/* Name and title */}
       <div>
         <p className="font-bold text-lg text-primary">{name}</p>
         <p className="font-semibold text-sm">{title}</p>
       </div>
 
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
-        <p className="text-gray-500 text-sm">
+      {/* Positions */}
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+        <p className="text-gray-500 text-sm whitespace-nowrap">
           We have also filled these positions:
         </p>
         <div className="flex flex-wrap gap-2">

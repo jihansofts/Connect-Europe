@@ -8,14 +8,14 @@ interface TabProps {
   title: string;
   description: string;
 }
-const tabs = ["Tech", "Support"];
+const tabs = ["Segments", "Positions"];
 
 const tabContent: Record<string, TabProps> = {
-  Tech: {
-    title: "We help you build your Tech Teams",
-    description: "Discover top engineering and design talent.",
+  Segments: {
+    title: "No matter the industry, we find the talent you need.",
+    description: "We don’t just promise results, we prove them.",
   },
-  Support: {
+  Positions: {
     title: "We help you grow Support Teams",
     description: "Find customer support and sales professionals.",
   },
@@ -27,79 +27,79 @@ const dataService = [
     successRate: "88%",
     timeToFill: "2 weeks",
     backText: "Detailed insights or alternate view here!",
-    category: "Tech",
+    category: "Segments",
   },
   {
-    title: "Design Team",
-    icon: "D",
+    title: "Automotive",
+    icon: "A",
     successRate: "92%",
     timeToFill: "1 week",
-    backText: "Creative insights and collaboration tools!",
-    category: "Tech",
+    backText: "Agile product experts for scalable growth.",
+    category: "Segments",
   },
   {
-    title: "Development Team",
-    icon: "DEV",
+    title: "Retail & Shop",
+    icon: "R",
     successRate: "90%",
     timeToFill: "3 weeks",
-    backText: "Skilled developers across stacks and platforms.",
-    category: "Tech",
+    backText: "Retail & Shop",
+    category: "Segments",
   },
   {
-    title: "Product Management",
-    icon: "PM",
+    title: "IT & Tech",
+    icon: "IT",
     successRate: "89%",
     timeToFill: "2 weeks",
-    backText: "Agile product experts for scalable growth.",
-    category: "Tech",
+    backText: "Detailed insights or alternate view here!",
+    category: "Segments",
   },
   {
-    title: "Data Analytics",
-    icon: "DA",
+    title: "Services",
+    icon: "S",
     successRate: "94%",
     timeToFill: "2 weeks",
-    backText: "Turning data into actionable insights.",
-    category: "Tech",
+    backText: "Services Team",
+    category: "Segments",
   },
   {
-    title: "UI/UX Team",
+    title: "Food Production",
     icon: "UX",
     successRate: "91%",
     timeToFill: "1 week",
-    backText: "Focused on user-first design and experiences.",
-    category: "Tech",
+    backText: "Food Production Team",
+    category: "Segments",
   },
   {
-    title: "Sales Team",
-    icon: "S",
+    title: "Construction",
+    icon: "C",
     successRate: "95%",
     timeToFill: "2 weeks",
     backText: "Detailed insights or alternate view here!",
-    category: "Support",
+    category: "Positions",
   },
   {
-    title: "Customer Support",
-    icon: "C",
+    title: "Logistics & Transport",
+    icon: "L",
     successRate: "91%",
     timeToFill: "1 week",
     backText: "Creative insights and collaboration tools!",
-    category: "Support",
+    category: "Positions",
   },
   {
-    title: "Account Managers",
+    title: "Hospitality",
     icon: "AM",
     successRate: "89%",
     timeToFill: "2 weeks",
-    backText: "Building client relationships that last.",
-    category: "Support",
+    backText: "Building a culture of innovation.",
+    category: "Positions",
   },
   {
-    title: "HR Team",
-    icon: "HR",
+    title: "Healthcare",
+    icon: "H",
     successRate: "93%",
     timeToFill: "2 weeks",
-    backText: "Hiring & supporting internal talent growth.",
-    category: "Support",
+    backText: "Healthcare Team",
+    category: "Positions",
   },
   {
     title: "IT Helpdesk",
@@ -107,7 +107,7 @@ const dataService = [
     successRate: "90%",
     timeToFill: "1 week",
     backText: "Technical support for everyday operations.",
-    category: "Support",
+    category: "Positions",
   },
   {
     title: "Finance Team",
@@ -115,12 +115,12 @@ const dataService = [
     successRate: "94%",
     timeToFill: "2 weeks",
     backText: "Managing budgets and financial performance.",
-    category: "Support",
+    category: "Positions",
   },
 ];
 
 export default function Industry() {
-  const [activeTab, setActiveTab] = useState("Tech");
+  const [activeTab, setActiveTab] = useState("Segments");
 
   const filteredData = dataService.filter(
     (item) => item.category === activeTab

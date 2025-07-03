@@ -17,17 +17,17 @@ export default function Hero() {
         </div>
         <div className="mt-5">
           <h1 className="text-[55px] font-bold text-center text-white font-sans">
-            Preferred Recruitment Agency
+            Smart Hiring. Real Results. Europe-Wide.
           </h1>
           <p className="text-white font-normal text-center font-sans text-[20px]">
-            we can find a candidate for every position we succeed even where
-            others do not
+            At Connect Europe, we don’t just fill roles we find game-changers.
+            Fast, efficient, and tailored to your business goals.
           </p>
           <div className="flex justify-center mt-5">
             <button
               onClick={openModel}
               className="border border-white text-white hover:bg-heading hover:border-heading cursor-pointer duration-200 uppercase px-10 py-3 font-semibold rounded font-sans">
-              i need an employee
+              Talk to Our Experts
             </button>
           </div>
         </div>

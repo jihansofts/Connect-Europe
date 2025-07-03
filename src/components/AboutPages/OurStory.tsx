@@ -5,16 +5,16 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const timeline = [
   {
-    year: "2004",
-    text: "Entering the market and establishing a TC in competition with recruitment agencies",
+    year: "2014",
+    text: " Connect Europe is founded Entered the HR consulting and recruitment market with a fresh, client-centric approach ",
   },
   {
-    year: "2008",
-    text: "Change of legal form / coping with the financial crisis",
+    year: "2016",
+    text: "Navigated market shifts and built a strong foundation of trust with clients across Europe",
   },
   {
-    year: "2010",
-    text: "Entry to international markets, improvement of know-how",
+    year: "2018",
+    text: " Expanded into international markets Enhanced recruitment methodologies and consultancy know-how",
   },
   {
     year: "2015",
@@ -44,11 +44,19 @@ export default function OurStory() {
     <section className="bg-white py-20">
       <div className="max-w-2xl mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-6">
-          Our story
+          10 Years of Impact Across Europe
         </h1>
         <p className="text-gray-600 text-center max-w-3xl mx-auto">
-          The year 2004 marked our entry into the market of consultancy services
-          in the field of human resources management and recruitment agencies.
+          Connect Europe began its journey in 2014, stepping into the
+          competitive world of HR consultancy and recruitment with a clear goal:
+          to provide smart, people-first solutions that deliver real business
+          value. From day one, we’ve combined academic insight with hands-on
+          experience, translating knowledge into action.
+        </p>
+        <p className="text-gray-600 text-center max-w-3xl mx-auto mt-6">
+          Over the past decade, we’ve embraced constant learning, professional
+          development, and a commitment to excellence. Here&apos;s how far we’ve
+          come:
         </p>
       </div>
 

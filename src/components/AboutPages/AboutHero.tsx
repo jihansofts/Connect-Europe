@@ -18,7 +18,8 @@ export default function AboutHero() {
             About
           </h1>
           <p className="text-white font-normal text-center font-sans text-[20px] mt-2">
-            Get to know us and our story
+            Discover who we are, what drives us, and the story behind our
+            journey.
           </p>
         </motion.div>
 
@@ -33,18 +34,20 @@ export default function AboutHero() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}>
               <h4 className="text-[24px] font-bold text-heading font-sans">
-                We find top people on call
+                Connect Europe: Top Talent, On Demand
               </h4>
               <p className="text-[16px] font-normal text-gray-700 font-sans mt-5">
-                We are a team of experienced industry professionals. For more
-                than 20 years, our consultants have been helping companies
-                attract the best people to their teams.
+                At Connect Europe, we specialize in finding the right people
+                right when you need them. With over 10 years of experience, our
+                team of seasoned industry professionals has been helping
+                businesses across Europe attract exceptional talent.
               </p>
               <p className="text-[16px] font-normal text-gray-700 font-sans mt-5">
-                Our experience is both local and international. We have
-                extensive experience in recruitment, executive search and
-                business development. This creates a strong synergy that
-                benefits our clients.
+                Our expertise spans both local markets and international
+                recruitment. From executive search to strategic business
+                development, we bring deep insight and proven results. This
+                unique blend of skills creates powerful synergies that drive
+                success for our clients.
               </p>
               <span className="text-[18px] font-bold text-primary font-sans">
                 - Ing. Miriam Krpelánová, Managing Director

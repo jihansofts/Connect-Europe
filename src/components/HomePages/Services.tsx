@@ -67,17 +67,20 @@ export default function Services() {
       <div className="container mx-auto">
         <div>
           <h1 className="lg:text-[48px] sm:text-[32px] text-[32px] font-bold text-center text-white font-sans  md:text-[40px]">
-            Services we use to help our clients succeed
+            Services That Drive Your Success
           </h1>
           <p className="text-[20px] text-white text-center font-sans mt-4">
-            Lean on our years of experience
+            Leverage our expertise and proven strategies to build stronger teams
+            across Europe.
           </p>
         </div>
         <div className="grid max-w-7xl justify-center items-center mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
           <div>
             <ul className="text-white text-[24px] font-sans space-y-5 upperCase text-end">
               <li className=" uppercase hover:underline cursor-pointer">
-                <Link href="/get-an-employee/#Recruiting">RECRUITING</Link>
+                <Link href="/get-an-employee/#Recruiting">
+                  Talent Acquisition
+                </Link>
               </li>
               <li className=" uppercase hover:underline cursor-pointer">
                 <Link href="/get-an-employee/#Headhunting">Headhunting</Link>
@@ -102,10 +105,12 @@ export default function Services() {
                 <Link href="/get-hr-advice/#HR-consultancy">HR Marketing</Link>
               </li>
               <li className=" uppercase hover:underline cursor-pointer">
-                <Link href="/get-hr-advice/#HR-marketing">HR ADVISORY</Link>
+                <Link href="/get-hr-advice/#HR-marketing"> HR Advisory</Link>
               </li>
               <li className=" uppercase hover:underline cursor-pointer">
-                <Link href="/get-hr-advice/#Education">Education</Link>
+                <Link href="/get-hr-advice/#Education">
+                  Education and Training
+                </Link>
               </li>
             </ul>
           </div>

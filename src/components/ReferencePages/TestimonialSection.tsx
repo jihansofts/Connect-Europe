@@ -94,7 +94,7 @@ const data: TestimonialCardProps[] = [
     positions: ["Forklift Operator", "Warehouse Manager", "Dispatcher"],
   },
   {
-    companyLogo: "/images/12.png",
+    companyLogo: "/images/9.png",
     company: "AutoFusion",
     quote: "Fast and efficient hiring support from Trigon.",
     name: "Ján Urban",
@@ -102,7 +102,7 @@ const data: TestimonialCardProps[] = [
     positions: ["Line Worker", "Tool Setter", "Maintenance Technician"],
   },
   {
-    companyLogo: "/images/13.png",
+    companyLogo: "/images/10.png",
     company: "Innotech",
     quote: "Creative and highly capable team delivered.",
     name: "Michaela Švecová",
@@ -110,7 +110,7 @@ const data: TestimonialCardProps[] = [
     positions: ["Product Designer", "UX Researcher", "Prototyping Engineer"],
   },
   {
-    companyLogo: "/images/14.png",
+    companyLogo: "/images/11.png",
     company: "EcoForm",
     quote: "Trigon supports our mission with top professionals.",
     name: "Martin Košík",
@@ -141,7 +141,7 @@ export default function TestimonialSection() {
     <section className="bg-white py-20">
       <div className="container mx-auto w-7xl">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8"
+          className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 p-8 "
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

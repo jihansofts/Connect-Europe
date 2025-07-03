@@ -7,12 +7,12 @@ import { Menu, X, ChevronRight } from "lucide-react";
 
 import Link from "next/link";
 const navItem = [
-  { name: "About", link: "/about" },
+  { name: "About Us", link: "/about" },
   { name: "Get An Employee", link: "/get-an-employee" },
-  { name: "Get HR Advice", link: "/get-hr-advice" },
+  { name: "HR Support", link: "/get-hr-advice" },
   // { name: "HR Blog", link: "/hr-blog" },
-  { name: "Reference", link: "/reference" },
-  { name: "Contact", link: "/contact" },
+  { name: "References", link: "/reference" },
+  { name: "Contact Us", link: "/contact" },
 ];
 
 export default function Navbar() {
@@ -38,7 +38,7 @@ export default function Navbar() {
         <Link
           href="/contact"
           className="border border-white px-10 py-2 hover:bg-heading hover:border-heading cursor-pointer duration-200  text-white rounded">
-          Contact
+          Contact Us
         </Link>
       </div>
 
