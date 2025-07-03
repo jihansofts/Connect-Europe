@@ -65,14 +65,14 @@ export default function GetServices() {
       <div className="container  mx-auto">
         <ServiceSection
           id="Recruiting"
-          title="Recruiting"
+          title="Professional Recruitment"
           subtitle="Service"
           imageSrc="/images/service1.jpg"
           reverse // ⬅️ Image on the right
           paragraphs={[
-            "We will provide you with suitable candidates for key positions without costing you a lot of time and energy. Our recruitment process is designed to ensure that you, the client, get the best talent for your organisation.",
-            "We start by thoroughly understanding your recruitment needs, including job requirements, qualifications and required skills. We will then use our extensive network and various search methods to source qualified candidates. Our consultants will then carefully review and assess each candidate’s experience, expertise, qualities and motivation. We’ll provide you with a curated list of the best candidates, along with comprehensive profiles and recommendations to help you make the right decisions.",
-            "We ensure open and transparent communication throughout the process, keeping you informed of progress and working closely with you to successfully fill your vacancies",
+            "We take the stress out of hiring by delivering qualified candidates for key positions without wasting your time.",
+            "Our recruitment process is tailored to match your business needs. We begin by understanding your role requirements, ideal qualifications, and the skills you’re looking for. Then, using our wide-reaching network and advanced sourcing strategies, we identify and assess the most suitable professionals.",
+            "Each candidate is carefully screened not just for experience, but for cultural fit, motivation, and long-term value. You’ll receive a curated shortlist with detailed profiles and clear recommendations to support your hiring decisions.",
           ]}
         />
         <StepsSection />

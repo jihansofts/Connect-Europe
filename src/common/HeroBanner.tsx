@@ -23,7 +23,7 @@ export default function HeroBanner({ title, desc, btn }: Props) {
             <button
               onClick={openModel}
               className="border border-white text-white hover:bg-heading hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans">
-              i am interested
+              I’m Interested
             </button>
           </div>
         )}
