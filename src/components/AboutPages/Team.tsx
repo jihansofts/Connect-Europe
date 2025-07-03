@@ -97,7 +97,7 @@ export default function Team() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}>
           <h1 className="text-[48px] font-bold text-center text-heading font-sans">
-            Read more about our colleagues
+            Meet Our Experts
           </h1>
         </motion.div>
 
@@ -107,9 +107,10 @@ export default function Team() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}>
-          Expertise is the fundamental pillar on which our company stands and
-          also what our partners can rely on 100%. Expertise is what we pride
-          ourselves on and continually develop in our consultants.
+          At Connect Europe, expertise is our foundation. Our clients trust us
+          for our deep industry knowledge, professionalism, and commitment to
+          continuous development. We invest in our consultants to ensure
+          top-tier service and results across every project.
         </motion.p>
       </div>
 

@@ -17,12 +17,24 @@ const timeline = [
     text: " Expanded into international markets Enhanced recruitment methodologies and consultancy know-how",
   },
   {
-    year: "2015",
-    text: "The largest personnel agency in the Banska Bystrica region",
+    year: "2020",
+    text: " Became a leading HR partner in multiple European regions Launched internal training programs to strengthen team expertise",
   },
   {
-    year: "2018",
-    text: "Significant expansion of the team of external consultants, thereby expanding our scope to the entire territory of the Slovak Republic",
+    year: "2021",
+    text: "Introduced consulting services in external HR financing Developed tailor-made strategies for workforce development",
+  },
+  {
+    year: "2022",
+    text: " • Offered full-spectrum HR services: from audits to implementation Strengthened partnerships with mid-sized and large European businesses",
+  },
+  {
+    year: "2023",
+    text: " Built a stronger, multidisciplinary team of consultants Invested in systematic internal learning and development",
+  },
+  {
+    year: "2024",
+    text: "Celebrating 10 years of transforming the way Europe recruits and grows talent Looking ahead: expanding solutions, refining expertise, and growing together with our clients",
   },
 ];
 
