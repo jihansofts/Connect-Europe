@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <div className="relative z-50">
       {/* Top Navbar */}
-      <div className="fixed top-0 left-0 right-0 p-4 px-10 flex justify-between items-center bg-primary shadow-md">
+      <div className="fixed top-0 left-0 right-0 p-4 lg:px-16 md:px-10 sm:px-5 px-5 flex gap-x-5 justify-between items-center bg-primary shadow-md">
         <div className="flex space-x-2 text-white">
           <Menu className="cursor-pointer" onClick={() => setOpen(true)} />
           <span>Menu</span>
@@ -37,7 +37,7 @@ export default function Navbar() {
         </Link>
         <Link
           href="/contact"
-          className="border border-white px-10 py-2 hover:bg-heading hover:border-heading cursor-pointer duration-200  text-white rounded">
+          className="border border-white text-[12px] lg:text-[22px] md:text-[18px] sm:text-[16px] lg:px-10 md:px-8 sm:px-6 px-4 py-2 hover:bg-heading hover:border-heading cursor-pointer duration-200 text-white rounded">
           Contact Us
         </Link>
       </div>
