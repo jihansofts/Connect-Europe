@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function ContactArea() {
   return (
@@ -9,9 +9,12 @@ export default function ContactArea() {
           {/* Left Column - Contact Form */}
           <div className="space-y-6">
             <h1 className="text-[24px] font-bold text-heading">
-              In what area can we help you?
+              How Can We Help You?
             </h1>
-
+            <p className="text-sm text-gray-600">
+              Whether you&apos;re looking for your next great hire or exploring
+              recruitment solutions, we’re here to assist.
+            </p>
             <div className="space-y-4">
               <div className="space-y-4">
                 <div className="flex flex-col">
@@ -94,14 +97,15 @@ export default function ContactArea() {
                 className="h-4 w-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
               />
               <label htmlFor="consent" className="ml-2 text-sm text-gray-700">
-                I consent to the processing of personal data
+                I consent to the processing of my personal data in accordance
+                with GDPR.
               </label>
             </div>
 
             <div className="pt-4 border-t border-gray-200">
               <button className="bg-primary hover:bg-heading cursor-pointer text-white px-6 py-3 rounded-md font-semibold transition-all">
                 {" "}
-                Send To
+                Send Request
               </button>
             </div>
           </div>
@@ -118,7 +122,12 @@ export default function ContactArea() {
               </p> */}
               <address className="not-italic  cursor-pointer space-y-1 mt-20 ">
                 <p className="text-heading font-bold text-[20px]">
-                  📧 Get in Touch by Email
+                  📧Get in Touch
+                </p>
+                <p className="text-[16px] text-gray-600">
+                  {" "}
+                  Fill out the form below, and a member of our team will get
+                  back to you shortly.
                 </p>
                 <a
                   href="mailto:contact@connecteurope.agency"
@@ -159,6 +168,11 @@ export default function ContactArea() {
               <div className="p-5 bg-primary rounded-full hover:bg-heading duration-200 cursor-pointer w-8 h-8 flex items-center justify-center">
                 <span className="">
                   <Linkedin className="w-5 h-5 text-white" />
+                </span>
+              </div>
+              <div className="p-5 bg-primary rounded-full hover:bg-heading duration-200 cursor-pointer w-8 h-8 flex items-center justify-center">
+                <span className="">
+                  <Instagram className="text-white" />
                 </span>
               </div>
             </div>

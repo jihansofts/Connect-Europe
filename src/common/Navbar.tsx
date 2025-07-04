@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
 
 import Link from "next/link";
 const navItem = [
@@ -24,7 +24,6 @@ export default function Navbar() {
       <div className="fixed top-0 left-0 right-0 p-4 lg:px-16 md:px-10 sm:px-5 px-5 flex gap-x-5 justify-between items-center bg-primary shadow-md">
         <div className="flex space-x-2 text-white">
           <Menu className="cursor-pointer" onClick={() => setOpen(true)} />
-          <span>Menu</span>
         </div>
         <Link href="/">
           <Image
@@ -63,7 +62,14 @@ export default function Navbar() {
               transition={{ type: "tween" }}
               className="fixed top-0 left-0 h-full w-[300px] bg-primary shadow-lg z-50 p-6">
               <div className="flex justify-between items-center mb-8">
-                <h2 className="text-xl text-white font-semibold">Menu</h2>
+                {/* <h2 className="text-xl text-white font-semibold">Connect Europe</h2> */}
+                <Image
+                  src="/logo.png"
+                  alt="logo"
+                  width={100}
+                  height={100}
+                  className="cursor-pointer"
+                />
                 <X
                   className="cursor-pointer text-white"
                   onClick={() => setOpen(false)}
@@ -71,7 +77,18 @@ export default function Navbar() {
               </div>
 
               <div className="h-full flex items-center justify-center">
-                <ul className="space-y-4 flex flex-col items-end">
+                <ul className="space-y-4 flex flex-col items-center">
+                  <div className="flex justify-center items-center">
+                    <div className="w-10 h-10 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center">
+                      <Facebook className="text-white" />
+                    </div>
+                    <div className="w-10 h-10 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center ml-2">
+                      <Instagram className="text-white" />
+                    </div>
+                    <div className="w-10 h-10 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center ml-2">
+                      <Linkedin className="text-white" />
+                    </div>
+                  </div>
                   {navItem.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -79,7 +96,7 @@ export default function Navbar() {
                         onClick={() => setOpen(false)}
                         className="text-xl font-bold text-white hover:text-heading">
                         {item.name}
-                        <ChevronRight className="inline ml-2" />
+                        {/* <ChevronRight className="inline ml-2" /> */}
                       </Link>
                     </li>
                   ))}

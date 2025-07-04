@@ -35,7 +35,7 @@ export default function AboutBanner({ image, title, subtitle, desc }: Props) {
             <Link
               href="/about"
               className="border border-white text-white hover:bg-primary hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans">
-              More About Trigone
+              More About Us
             </Link>
           </div>
         </div>

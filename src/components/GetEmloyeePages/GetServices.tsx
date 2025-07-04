@@ -7,7 +7,6 @@ import StepsSection from "./StepsSection";
 import AboutBanner from "@/common/AboutBanner";
 
 export default function GetServices() {
-
   const smothScroll = (id: string, duration = 1000) => {
     const target = document.getElementById(id);
     if (!target) return;
@@ -78,34 +77,34 @@ export default function GetServices() {
         <StepsSection />
         <ServiceSection
           id="Headhunting"
-          title="Headhunting"
+          title="Strategic Talent Search"
           subtitle="Service"
           imageSrc="/images/service2.jpg"
           paragraphs={[
-            "Headhunting, or executive search, is a specialist consultancy service for the highly effective identification, sourcing and attraction of top talent. We’ll find, reach out and get you the professionals with the experience and quality you need to bring the value you need.When it comes to finding the best talent for your organization, sometimes the traditional recruitment process just doesn’t cut it. This is where headhunting services come in. Our team of experienced headhunters have a proven track record of finding, approaching and recruiting top talent who are not actively seeking new opportunities.",
-            "With our extensive network of contacts and our in-depth knowledge of the industry, we can find the right person for even the most challenging assignments. We take the time to understand your business, culture and recruitment needs so we can find candidates who not only have the right skills and experience, but also those who are the right fit for your team. Plus, our confidential approach ensures that your search remains discreet and you only pay for success. Let us help you find the best talent for your organization with our headhunting services. Contact us today to find out more.",
+            "When traditional recruitment isn’t enough, our executive search service delivers. We identify and approach high-calibre professionals who aren’t actively job-hunting but are open to the right opportunity.",
+            "Our experienced headhunters use a confidential, research-based process to locate top-tier candidates with the leadership, expertise, and cultural fit of your business needs. We understand your company’s structure, values, and vision then we connect you with proven professionals who can make a difference from day one.",
+            "We offer a discreet and tailored recruitment process, giving you exclusive access to top-tier passive candidates who aren’t actively job-hunting. With our performance-based model, you only pay when we successfully place the right talent ensuring a risk-free, results-driven experience tailored to your business needs.",
+            "Let’s help you hire your next game-changer.",
           ]}
         />
         <ServiceSection
           id="Interim"
-          title="Interim"
+          title="Interim Management"
           subtitle="Service"
           imageSrc="/images/service3.jpg"
           reverse //
           paragraphs={[
-            "We will provide you with an expert who will bring high efficiency to your processes. An interim manager is a person who temporarily becomes part of your company. You can hire an interim manager to deal with changes, new projects, strategic tasks or unpopular moves. This professional is highly qualified, has a range of work experience and has completed a wide variety of projects. The interim manager does not need adaptation, he/she solves the entrusted tasks immediately.",
-            "If your organisation is facing a significant change that requires the rapid involvement of an experienced manager, an interim service is the solution you need. Our team of interim managers has extensive experience in leading organisations through periods of change and transformation. Whether you need a CEO, CFO, CMO, or any other leadership position, we can provide you with an interim manager. He/she will have the skills, experience and expertise to engage immediately in processes and deliver results.",
-            "With our flexible service model, you can use an interim manager for as long as you need, whether that’s a few weeks, months or longer. We take the time to understand your business, culture and goals so that we can provide you with an interim manager that will be a good fit for your organization. Let us help you navigate change and achieve results with our interim management services.",
+            "Need an experienced leader to manage a transition, project, or crisis? Our interim managers step in fast with the skills and authority to drive results from day one.",
+            "Each professional we place brings years of hands-on leadership across industries. Whether it’s for a few weeks or several months, we’ll match you with a senior expert who aligns with your company goals and gets the job done.",
+            "We’ll provide a senior expert who aligns seamlessly with your business goals and delivers swift, measurable impact. With no need for onboarding, they hit the ground running making an immediate difference from day one. Whether you need support for a short-term project or a longer engagement, our flexible approach ensures you get the right expertise, exactly when and where you need it. You can count on proven professionals who perform reliably, even under the most demanding conditions.",
           ]}
         />
       </div>
       <AboutBanner
         image="/images/meet.webp"
-        title="Our Team"
+        title="Our Meet Our Consultants"
         subtitle="Meet Our Consultants"
-        desc=" Expertise is the fundamental pillar on which our company stands and
-            also what our partners can rely on 100%. Expertise is what we pride
-            ourselves on and continually develop in our consultants."
+        desc="At Connect Europe, our consultants are more than recruiters; they're industry-savvy problem solvers. We combine deep HR knowledge with real-world experience to deliver solutions that work."
       />
     </section>
   );
