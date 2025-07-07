@@ -1,16 +1,15 @@
-import React from "react";
 import AboutHero from "@/components/AboutPages/AboutHero";
 import OurStory from "@/components/AboutPages/OurStory";
-// import Team from "@/components/AboutPages/Team";
 import Ourway from "@/components/AboutPages/Ourway";
+import Layout from "@/components/Layout";
+import React from "react";
 
-export default function Page() {
+export default function about() {
   return (
-    <main>
+    <Layout>
       <AboutHero />
       <OurStory />
-      {/* <Team /> */}
       <Ourway />
-    </main>
+    </Layout>
   );
 }

@@ -1,14 +1,15 @@
-import Contact from "@/components/ContactPages/Contact";
 import ContactArea from "@/components/ContactPages/ContactArea";
 import MapArea from "@/components/ContactPages/MapArea";
+import Layout from "@/components/Layout";
+import { Contact } from "lucide-react";
 import React from "react";
 
-export default function page() {
+export default function contact() {
   return (
-    <main>
+    <Layout>
       <Contact />
       <ContactArea />
       <MapArea />
-    </main>
+    </Layout>
   );
 }

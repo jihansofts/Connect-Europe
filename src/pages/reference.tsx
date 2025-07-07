@@ -1,12 +1,13 @@
 import HeroBanner from "@/common/HeroBanner";
+import Layout from "@/components/Layout";
 import BannerCount from "@/components/ReferencePages/BannerCount";
 import BrandAds from "@/components/ReferencePages/BrandAds";
 import TestimonialSection from "@/components/ReferencePages/TestimonialSection";
 import React from "react";
 
-export default function page() {
+export default function reference() {
   return (
-    <main>
+    <Layout>
       <HeroBanner
         title="References"
         desc="our results speak for themselves"
@@ -15,6 +16,6 @@ export default function page() {
       <BannerCount />
       <TestimonialSection />
       <BrandAds />
-    </main>
+    </Layout>
   );
 }

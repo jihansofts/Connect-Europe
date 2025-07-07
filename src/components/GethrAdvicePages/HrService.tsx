@@ -33,18 +33,18 @@ export default function HrService() {
   return (
     <section className="bg-white py-20 px-5">
       <div className="container max-w-7xl mx-auto">
-        <ul className="flex flex-nowrap overflow-x-auto pb-2 space-x-6 px-4 md:flex-wrap md:justify-center md:overflow-x-visible md:space-x-10">
+        <ul className="flex flex-nowrap  overflow-x-auto pb-2 space-x-6 px-4 md:flex-wrap md:justify-center md:overflow-x-visible md:space-x-10">
           {[
-            { id: "HR-consultancy", label: "HR consultancy" },
-            { id: "Staff-audit", label: "Staff audit" },
-            { id: "HR-marketing", label: "HR marketing" },
-            { id: "Education", label: "Education" },
+            { id: "HR-consultancy", label: "Advisory" },
+            { id: "Staff-audit", label: "Assessment" },
+            { id: "HR-marketing", label: "Branding " },
+            { id: "Education", label: "Training" },
             { id: "Succession", label: "Succession" },
-            { id: "Salary-survey", label: "Salary survey" },
+            { id: "Salary-survey", label: "Benchmarking" },
           ].map((item) => (
             <li key={item.id} className="flex-shrink-0 md:flex-shrink">
               <button
-                className="text-lg md:text-[22px] text-primary hover:underline whitespace-nowrap"
+                className="text-lg md:text-[22px] cursor-pointer text-primary hover:underline whitespace-nowrap"
                 onClick={() => smothScroll(item.id, 1000)}>
                 {item.label}
               </button>
@@ -55,13 +55,13 @@ export default function HrService() {
       <div className="container mx-auto">
         <ServiceSection
           id="HR-consultancy"
-          title="HR consultancy"
+          title="Advisory"
           subtitle="Service"
           imageSrc="/images/service3.jpg"
           paragraphs={[
-            "Make the most of your employees’ potential with our expert human resources consultancy services. With over 16 years in the HR industry, our team of human resources professionals is equipped with the knowledge and experience to help your company compete in the job market.",
-            "Our human resources consulting services are designed to meet your company’s unique needs. Through our consultants, we provide you with comprehensive human resources solutions that align with your business objectives. The scope of our consulting services ranges from strategic workforce planning, recruitment/selection/adaptation to talent acquisition and retention, employee engagement, performance management and more.",
-            "HR outsourcing is an important part of our HR services. In this case, even a smaller company can get the benefits of a top external HR manager under favourable financial conditions.",
+            "Empower your organization with strategic HR guidance. At <strong>Connect Europe</strong>, we bring over 10 years of experience in human capital management to help you build smarter, stronger teams.",
+            "Our advisory services cover everything from workforce planning and recruitment to talent retention, engagement, and performance management. Each solution is tailored to your business goals ensuring your people strategy drives real results.",
+            "Need on-demand support? Our HR outsourcing option gives you access to senior HR expertise without the overhead.",
           ]}
           expandableContent={[
             "Building a team from the ground up is a difficult task. As with all our services, we create a turnkey solution. We use all professional procedures and methodologies sensitively, according to experience and taking into account the current situation.",

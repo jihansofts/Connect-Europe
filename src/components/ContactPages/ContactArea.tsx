@@ -27,8 +27,8 @@ export default function ContactArea() {
                     id="employee"
                     className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:primary appearance-none bg-white ">
                     <option value="Employee">Employee</option>
-                    <option value="hrcouncil">HR Council</option>
-                    <option value="interim">Interim Manager</option>
+                    <option value="hrcouncil">Workers</option>
+                 
                   </select>
                 </div>
 

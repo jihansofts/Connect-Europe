@@ -48,7 +48,7 @@ export default function RecruitingPages() {
         <StepsSection />
       </div>
       <AboutBanner
-        title="Our team"
+        title="Our meetings"
         desc="Expertise is the fundamental pillar on which our company stands and also what our partners can rely on 100%. Expertise is what we pride ourselves on and continually develop in our consultants.
 
         "

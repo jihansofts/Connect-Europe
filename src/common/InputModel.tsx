@@ -3,12 +3,7 @@ import React, { useState } from "react";
 import { useInputModel } from "@/context/ModelContext";
 import { X } from "lucide-react";
 
-const tabs = [
-  "I need an employee",
-  "HR Council",
-  "Interim manager",
-  "Looking for work",
-];
+const tabs = ["I need an employee", "I need Workers"];
 
 export default function InputModal() {
   const { isOpen, closeModel } = useInputModel();
