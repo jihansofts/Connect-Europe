@@ -17,8 +17,8 @@ export default function MapArea() {
         </div>
       </div>
       <AboutBanner
-        image="/images/ceo.png"
-        title="Miroslav Lichy"
+        image="/card1.webp"
+        title="Nikolai Jensen"
         subtitle="MANAGING PARTNER"
         desc="Expertise is the fundamental pillar on which our company stands and also what our partners can rely on 100%. Expertise is what we pride ourselves on and continually develop in our consultants."
       />

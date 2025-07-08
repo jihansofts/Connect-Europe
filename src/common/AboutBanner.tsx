@@ -16,9 +16,9 @@ export default function AboutBanner({ image, title, subtitle, desc }: Props) {
           <Image
             src={image}
             alt="hero"
-            width={500}
-            height={500}
-            className="rounded-md"
+            width={400}
+            height={400}
+            className="rounded-md max-w-[350px]"
           />
         </div>
         <div className="flex flex-col max-w-2xl items-start">

@@ -141,8 +141,8 @@ export default function HrService() {
         />
       </div>
       <AboutBanner
-        image="/images/manager..jpg"
-        title="Ing. Miriam Krpelánová"
+        image="/card1.webp"
+        title="Luca Romano"
         subtitle="MANAGING DIRECTOR | HEAD OF CONSULTING"
         desc="I started my working career in education. I have been actively involved in Human Resources for the last 5 years."
       />

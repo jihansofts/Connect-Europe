@@ -12,8 +12,8 @@ export default function ContactArea() {
               How Can We Help You?
             </h1>
             <p className="text-sm text-gray-600">
-              Whether you&apos;re looking for your next great hire or exploring
-              recruitment solutions, we’re here to assist.
+              Fill out the form below, and a member of our team will get back to
+              you shortly.
             </p>
             <div className="space-y-4">
               <div className="space-y-4">
@@ -21,14 +21,13 @@ export default function ContactArea() {
                   <label
                     htmlFor="employee"
                     className="text-sm font-bold text-heading mb-1">
-                    Get
+                    Position Needed
                   </label>
                   <select
                     id="employee"
                     className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:primary appearance-none bg-white ">
                     <option value="Employee">Employee</option>
                     <option value="hrcouncil">Workers</option>
-                 
                   </select>
                 </div>
 
@@ -36,7 +35,7 @@ export default function ContactArea() {
                   <label
                     htmlFor="name"
                     className="text-sm font-bold text-heading mb-1">
-                    Name
+                    Your Name
                   </label>
                   <input
                     type="text"
@@ -49,7 +48,7 @@ export default function ContactArea() {
                   <label
                     htmlFor="email"
                     className="text-sm font-bold text-heading mb-1">
-                    Email
+                    Email Address
                   </label>
                   <input
                     type="email"
@@ -62,7 +61,7 @@ export default function ContactArea() {
                   <label
                     htmlFor="phone"
                     className="text-sm font-bold text-heading mb-1">
-                    Phone
+                    Phone Number
                   </label>
                   <input
                     type="tel"
@@ -79,7 +78,7 @@ export default function ContactArea() {
                   <label
                     htmlFor="report"
                     className="text-sm font-bold text-heading mb-1">
-                    Report
+                    Message / Job Description
                   </label>
                   <textarea
                     id="report"

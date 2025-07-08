@@ -46,9 +46,10 @@ export default function InputModal() {
         </button>
 
         <h2 className="text-center mb-2 text-gray-700">
-          Where can we help you?
+          Fill out the form below, and a member of our team will get back to you
+          shortly.
         </h2>
-        <p className="text-center mb-6 font-semibold">I need:</p>
+        <p className="text-center mb-6 font-semibold">Position Needed</p>
 
         {/* Tabs */}
         <div className="flex justify-center gap-2 mb-6 flex-wrap">
@@ -71,7 +72,7 @@ export default function InputModal() {
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="Your Name"
             className="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:primary "
             onChange={handleChange}
             required
@@ -79,7 +80,7 @@ export default function InputModal() {
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Email Address"
             className="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:primary "
             onChange={handleChange}
             required
@@ -87,7 +88,7 @@ export default function InputModal() {
           <input
             type="text"
             name="phone"
-            placeholder="Phone"
+            placeholder="Phone Number"
             className="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:primary "
             onChange={handleChange}
           />
@@ -96,7 +97,7 @@ export default function InputModal() {
           {activeTab !== "Looking for work" && (
             <textarea
               name="report"
-              placeholder="Report"
+              placeholder="Message / Job Description"
               className="w-full border px-4 py-2 rounded h-24 focus:outline-none focus:ring-2 focus:ring-primary focus:primary"
               onChange={handleChange}
             />
@@ -104,13 +105,16 @@ export default function InputModal() {
 
           <label className="flex items-center space-x-2 text-sm">
             <input type="checkbox" name="consent" onChange={handleChange} />
-            <span>I consent to the processing of personal data</span>
+            <span>
+              I consent to the processing of my personal data in accordance with
+              GDPR.
+            </span>
           </label>
 
           <button
             type="submit"
             className="w-full bg-primary text-white py-2 rounded hover:bg-heading">
-            Send to
+            Send Request
           </button>
         </form>
       </div>

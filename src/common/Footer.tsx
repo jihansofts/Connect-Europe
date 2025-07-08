@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="max-w-7xl w-full border-t border-white pt-5 mx-auto flex items-center justify-between">
           <Image src="/logo.png" alt="logo" width={100} height={100} />
           <p className="text-white text-[20px] font-sans">
-            Copywright @ 2025 Connect Europe
+            Copyright @ 2025 Connect Europe
           </p>
         </div>
       </div>

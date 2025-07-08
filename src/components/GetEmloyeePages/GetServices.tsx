@@ -101,10 +101,10 @@ export default function GetServices() {
         />
       </div>
       <AboutBanner
-        image="/images/meet.webp"
-        title="Our Meet Our Consultants"
-        subtitle="Meet Our Consultants"
-        desc="At Connect Europe, our consultants are more than recruiters; they're industry-savvy problem solvers. We combine deep HR knowledge with real-world experience to deliver solutions that work."
+        image="/card1.webp"
+        title="Meet Our Experts"
+        subtitle="Skilled Consultants. Real Solutions."
+        desc="At Connect Europe, our consultants are industry-savvy problem solvers who blend HR expertise with hands-on experience to deliver impactful results."
       />
     </section>
   );
