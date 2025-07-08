@@ -10,7 +10,7 @@ const navItem = [
   { name: "About Us", link: "/about" },
   { name: "Get An Employee", link: "/get-an-employee" },
   { name: "HR Support", link: "/get-hr-advice" },
-  { name: "Recruiting", link: "/recruiting" },
+  { name: "Why Choose Us", link: "/WhyChoose" },
   { name: "References", link: "/reference" },
   { name: "Contact Us", link: "/contact" },
 ];

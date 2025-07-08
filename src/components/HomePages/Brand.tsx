@@ -14,12 +14,6 @@ const Images = [
   "/brand8.png",
   "/brand9.png",
   "/brand10.png",
-  "/brand11.png",
-  "/brand12.png",
-  "/brand13.png",
-  "/brand14.png",
-  "/brand15.png",
-  "/brand16.png",
 ];
 export default function Brand() {
   const { openModel } = useInputModel();
@@ -38,7 +32,11 @@ export default function Brand() {
         ))}
       </div>
       <div className="flex justify-center items-center mt-10">
-        <button onClick={openModel} className="border border-heading text-heading hover:bg-heading hover:text-white hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans">I Need An Employee</button>
+        <button
+          onClick={openModel}
+          className="border border-heading text-heading hover:bg-heading hover:text-white hover:border-heading cursor-pointer duration-200 capitalize px-10 py-3 font-semibold rounded font-sans">
+          I Need An Employee
+        </button>
       </div>
     </div>
   );

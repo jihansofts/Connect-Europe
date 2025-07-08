@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/public/Connect Europe
 /.pnp
 .pnp.*
 .yarn/*
