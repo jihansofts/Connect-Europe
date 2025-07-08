@@ -7,25 +7,16 @@ export default function Hero() {
   return (
     <section className="bg-primary py-10">
       <div className="mx-auto max-w-7xl">
-        <div className="aspect-video w-full mt-10">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/qkVjHvR-qAg?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0"
-            title="YouTube video"
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen></iframe>
-        </div>
-
-        {/* <div>
+        <div>
           <video
-            typeof="video/mp4"
             width="100%"
             height="100%"
             autoPlay
-            src="/https://www.youtube.com/watch?v=qkVjHvR-qAg"></video>
-        </div> */}
+            muted
+            playsInline
+            loop
+            src="https://res.cloudinary.com/dtw7qhd69/video/upload/v1751958617/Connect_Europe_for_website_1_qvivhk.mp4"></video>
+        </div>
         <div className="mt-5">
           <h1 className="text-[55px] font-bold text-center text-white font-sans">
             Smart Hiring. Real Results. Europe-Wide.
