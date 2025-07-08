@@ -93,7 +93,11 @@ const data: TestimonialCardProps[] = [
     quote: "Trigon had us in a key position within 2 weeks",
     name: "Roman Varga",
     title: "Executive Director",
-    positions: ["Field Engineer", "Facility Supervisor", "Maintenance Lead"],
+    positions: [
+      "Operations Manager",
+      "Sales & B2B Account Manage",
+      "Administrative Assistant",
+    ],
   },
   {
     companyLogo: "/brand2.png",
