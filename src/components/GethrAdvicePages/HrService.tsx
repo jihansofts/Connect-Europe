@@ -57,7 +57,7 @@ export default function HrService() {
           id="HR-consultancy"
           title="Advisory"
           subtitle="Service"
-          imageSrc="/images/service3.jpg"
+          imageSrc="/images/Advisory.jpg"
           paragraphs={[
             "Empower your organization with strategic HR guidance. At <strong>Connect Europe</strong>, we bring over 10 years of experience in human capital management to help you build smarter, stronger teams.",
             "Our advisory services cover everything from workforce planning and recruitment to talent retention, engagement, and performance management. Each solution is tailored to your business goals ensuring your people strategy drives real results.",

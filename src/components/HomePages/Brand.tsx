@@ -6,7 +6,7 @@ import { useInputModel } from "@/context/ModelContext";
 const Images = [
   "/brand1.png",
   "/brand2.png",
-  "/brand3.svg",
+  "/brand3.png",
   "/brand4.png",
   "/brand5.png",
   "/brand6.png",
@@ -19,7 +19,7 @@ export default function Brand() {
   const { openModel } = useInputModel();
   return (
     <div className="bg-white mx-auto px-5 py-20 container max-w-7xl">
-      <div className="grid grid-cols-1  justify-center gap-5 items-center md:grid-cols-4 lg:grid-cols-6">
+      <div className="grid grid-cols-1  justify-center gap-5 items-center md:grid-cols-4 lg:grid-cols-5">
         {Images.map((image, index) => (
           <Image
             key={index}

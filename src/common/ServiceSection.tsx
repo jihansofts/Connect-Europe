@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useInputModel } from "@/context/ModelContext";
 import React, { useState } from "react";
-import Link from "next/link";
 
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
@@ -105,11 +104,11 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({
           {/* Buttons */}
           <div className="mt-6 flex flex-wrap gap-4">
             {showMoreInfoButton && (
-              <Link
-                href="/recruiting"
+              <button
+                onClick={openModel}
                 className="border-2 border-primary text-primary px-6 py-3 rounded-md font-semibold hover:bg-primary hover:text-white transition-all">
                 MORE INFORMATION
-              </Link>
+              </button>
             )}
 
             {!hideButton && (

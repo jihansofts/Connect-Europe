@@ -6,7 +6,7 @@ import React from "react";
 
 const data: TestimonialCardProps[] = [
   {
-    companyLogo: "/images/1.png",
+    companyLogo: "/brand1.png",
     company: "HIMAS",
     quote: "Trigon had us in a key position within 2 weeks",
     name: "Ing. Mária Pepichová",
@@ -14,7 +14,7 @@ const data: TestimonialCardProps[] = [
     positions: ["Technical Director", "Electrician", "Janitor"],
   },
   {
-    companyLogo: "/images/2.png",
+    companyLogo: "/brand2.png",
     company: "DITEC",
     quote: "We have the highest number of relevant candidates from Trigon.",
     name: "Patrik Hasaj",
@@ -22,7 +22,7 @@ const data: TestimonialCardProps[] = [
     positions: ["IT architect", "SLA Manager", "IT analyst"],
   },
   {
-    companyLogo: "/images/3.png",
+    companyLogo: "/brand3.png",
     company: "PPS",
     quote: "TRIGON is our preferred recruitment agency",
     name: "Ing. Jozef Výbošťok",
@@ -30,7 +30,7 @@ const data: TestimonialCardProps[] = [
     positions: ["Supply chain manager", "Technologist", "Project Manager"],
   },
   {
-    companyLogo: "/images/4.png",
+    companyLogo: "/brand4.png",
     company: "amari banero",
     quote: "9 years of exclusive cooperation.",
     name: "Ing. Miroslav Cvengroš",
@@ -38,7 +38,7 @@ const data: TestimonialCardProps[] = [
     positions: ["External trader", "Internal trader", "CNC operator"],
   },
   {
-    companyLogo: "/images/5.png",
+    companyLogo: "/brand5.png",
     company: "KovexTech",
     quote: "Trigon always delivers skilled technicians fast.",
     name: "Lucia Bartová",
@@ -46,7 +46,7 @@ const data: TestimonialCardProps[] = [
     positions: ["Welder", "Mechanical Engineer", "Assembler"],
   },
   {
-    companyLogo: "/images/6.png",
+    companyLogo: "/brand6.png",
     company: "SoftServ",
     quote: "We rely on Trigon for top-tier IT candidates.",
     name: "Tomáš Šimko",
@@ -54,7 +54,7 @@ const data: TestimonialCardProps[] = [
     positions: ["Frontend Developer", "Backend Developer", "DevOps Engineer"],
   },
   {
-    companyLogo: "/images/7.png",
+    companyLogo: "/brand7.png",
     company: "BuildCorp",
     quote: "Exceptional turnaround and quality hires.",
     name: "Zuzana Kováčová",
@@ -62,7 +62,7 @@ const data: TestimonialCardProps[] = [
     positions: ["Construction Manager", "Architect", "Planner"],
   },
   {
-    companyLogo: "/images/8.png",
+    companyLogo: "/brand8.png",
     company: "GreenLogic",
     quote: "Their sustainability-minded talent impressed us.",
     name: "Peter Lenárt",
@@ -70,7 +70,7 @@ const data: TestimonialCardProps[] = [
     positions: ["Energy Consultant", "R&D Engineer", "Environmental Analyst"],
   },
   {
-    companyLogo: "/images/9.png",
+    companyLogo: "/brand9.png",
     company: "PharmaLux",
     quote: "Hard-to-fill positions were solved quickly.",
     name: "Ivana Filo",
@@ -78,44 +78,12 @@ const data: TestimonialCardProps[] = [
     positions: ["Lab Technician", "QA Manager", "Pharmacist"],
   },
   {
-    companyLogo: "/images/10.png",
+    companyLogo: "/brand10.png",
     company: "SkyNetics",
     quote: "Trigon helped scale our tech teams in record time.",
     name: "Erik Baláž",
     title: "Software Engineering Manager",
     positions: ["Full Stack Engineer", "Scrum Master", "QA Tester"],
-  },
-  {
-    companyLogo: "/images/11.png",
-    company: "Logix",
-    quote: "Reliable logistics staffing partner.",
-    name: "Katarína Holá",
-    title: "Logistics Supervisor",
-    positions: ["Forklift Operator", "Warehouse Manager", "Dispatcher"],
-  },
-  {
-    companyLogo: "/images/9.png",
-    company: "AutoFusion",
-    quote: "Fast and efficient hiring support from Trigon.",
-    name: "Ján Urban",
-    title: "Manufacturing Director",
-    positions: ["Line Worker", "Tool Setter", "Maintenance Technician"],
-  },
-  {
-    companyLogo: "/images/10.png",
-    company: "Innotech",
-    quote: "Creative and highly capable team delivered.",
-    name: "Michaela Švecová",
-    title: "Innovation Director",
-    positions: ["Product Designer", "UX Researcher", "Prototyping Engineer"],
-  },
-  {
-    companyLogo: "/images/11.png",
-    company: "EcoForm",
-    quote: "Trigon supports our mission with top professionals.",
-    name: "Martin Košík",
-    title: "Green Solutions Manager",
-    positions: ["Sustainability Analyst", "Eco Consultant", "CSR Officer"],
   },
 ];
 

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Images = [
   "/brand1.png",
   "/brand2.png",
-  "/brand3.svg",
+  "/brand3.png",
   "/brand4.png",
   "/brand5.png",
   "/brand6.png",
@@ -37,7 +37,7 @@ export default function BrandAds() {
     <section className="bg-white py-20">
       <div className="container w-7xl mx-auto">
         <motion.div
-          className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center"
+          className="grid grid-cols-3 md:grid-cols-5 gap-6 items-center"
           variants={containerVariants}
           initial="hidden"
           animate="show">

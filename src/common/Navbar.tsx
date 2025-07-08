@@ -7,10 +7,11 @@ import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
 
 import Link from "next/link";
 const navItem = [
+  { name: "Home", link: "/" },
   { name: "About Us", link: "/about" },
   { name: "Get An Employee", link: "/get-an-employee" },
   { name: "HR Support", link: "/get-hr-advice" },
-  { name: "Why Choose Us", link: "/WhyChoose" },
+  // { name: "Why Choose Us", link: "/WhyChoose" },
   { name: "References", link: "/reference" },
   { name: "Contact Us", link: "/contact" },
 ];
@@ -79,14 +80,18 @@ export default function Navbar() {
               <div className="h-full flex items-center justify-center">
                 <ul className="space-y-4 flex flex-col items-center">
                   <div className="flex justify-center items-center">
-                    <div className="w-10 h-10 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center">
-                      <Facebook className="text-white" />
+                    <div className="w-8 h-8 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center">
+                      <Facebook height={15} width={15} className="text-white" />
                     </div>
-                    <div className="w-10 h-10 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center ml-2">
-                      <Instagram className="text-white" />
+                    <div className="w-8 h-8 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center ml-2">
+                      <Instagram
+                        height={15}
+                        width={15}
+                        className="text-white"
+                      />
                     </div>
-                    <div className="w-10 h-10 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center ml-2">
-                      <Linkedin className="text-white" />
+                    <div className="w-8 h-8 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center ml-2">
+                      <Linkedin height={15} width={15} className="text-white" />
                     </div>
                   </div>
                   {navItem.map((item, index) => (
