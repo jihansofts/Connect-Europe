@@ -64,13 +64,15 @@ export default function Navbar() {
               className="fixed top-0 left-0 h-full w-[300px] bg-primary shadow-lg z-50 p-6">
               <div className="flex justify-between items-center mb-8">
                 {/* <h2 className="text-xl text-white font-semibold">Connect Europe</h2> */}
-                <Image
-                  src="/logo.png"
-                  alt="logo"
-                  width={100}
-                  height={100}
-                  className="cursor-pointer"
-                />
+                <Link href="/">
+                  <Image
+                    src="/logo.png"
+                    alt="logo"
+                    width={100}
+                    height={100}
+                    className="cursor-pointer"
+                  />
+                </Link>
                 <X
                   className="cursor-pointer text-white"
                   onClick={() => setOpen(false)}
