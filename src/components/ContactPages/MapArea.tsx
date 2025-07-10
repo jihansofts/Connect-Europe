@@ -18,8 +18,8 @@ export default function MapArea() {
       </div>
       <AboutBanner
         image="/card1.webp"
-        title="Nikolai Jensen"
-        subtitle="MANAGING PARTNER"
+        title=" Top Talent, On Demand"
+        subtitle="10 Years of Impact Across Europe"
         desc="Expertise is the fundamental pillar on which our company stands and also what our partners can rely on 100%. Expertise is what we pride ourselves on and continually develop in our consultants."
       />
     </section>

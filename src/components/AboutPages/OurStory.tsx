@@ -75,11 +75,11 @@ export default function OurStory() {
       {/* Timeline container */}
       <div ref={containerRef} className="relative max-w-5xl mx-auto mt-20 px-4">
         {/* Vertical Line */}
-        <div className="absolute top-0 left-3 md:left-1/2 w-[2px] bg-red-200 h-full transform md:-translate-x-1/2 z-0" />
+        <div className="absolute top-0 left-3 md:left-1/2 w-[2px] bg-green-500 h-full transform md:-translate-x-1/2 z-0" />
 
         {/* Moving red dot with pulse */}
         <motion.div
-          className="absolute left-3 md:left-1/2 w-5 h-5 rounded-full bg-red-600 z-10 md:-translate-x-1/2"
+          className="absolute left-3 md:left-1/2 w-5 h-5 rounded-full bg-primary z-10 md:-translate-x-1/2"
           style={{ top: dotY }}
           animate={{
             scale: [1, 1.2, 1],
@@ -107,7 +107,7 @@ export default function OurStory() {
                   : "justify-start md:justify-end md:pl-10"
               }`}>
               <div className="bg-white shadow-md rounded-xl p-6 max-w-md">
-                <p className="text-red-600 font-bold mb-2">{item.year}</p>
+                <p className="text-primary font-bold mb-2">{item.year}</p>
                 <p className="text-gray-700">{item.text}</p>
               </div>
             </motion.div>

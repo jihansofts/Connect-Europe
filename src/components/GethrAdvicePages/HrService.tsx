@@ -142,9 +142,9 @@ export default function HrService() {
       </div>
       <AboutBanner
         image="/card1.webp"
-        title="Luca Romano"
-        subtitle="MANAGING DIRECTOR | HEAD OF CONSULTING"
-        desc="I started my working career in education. I have been actively involved in Human Resources for the last 5 years."
+        title="Trusted Talent, On Call"
+        subtitle="A Decade of Excellence Across Europe"
+        desc="Our foundation is built on deep expertise — the very strength our partners trust completely. It's our pride, our passion, and a skill we continuously sharpen across every consultant we work with."
       />
     </section>
   );
