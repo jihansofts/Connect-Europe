@@ -1,11 +1,14 @@
 "use client";
 import React, { useState } from "react";
 
+import { FaYoutube, FaTiktok, FaPinterest } from "react-icons/fa";
+
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
 
 import Link from "next/link";
+import { FaXTwitter } from "react-icons/fa6";
 const navItem = [
   { name: "Home", link: "/" },
   { name: "About Us", link: "/about" },
@@ -14,6 +17,62 @@ const navItem = [
   // { name: "Why Choose Us", link: "/WhyChoose" },
   { name: "References", link: "/reference" },
   { name: "Contact Us", link: "/contact" },
+];
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/connectEurope.ag",
+    icon: (
+      <Facebook
+        height={12}
+        width={12}
+        className="text-white group-hover:text-primary"
+      />
+    ),
+  },
+  {
+    href: "https://www.instagram.com/connecteurope3/",
+    icon: (
+      <Instagram
+        height={12}
+        width={12}
+        className="text-white group-hover:text-primary"
+      />
+    ),
+  },
+  {
+    href: "https://www.linkedin.com/company/107184862/admin/dashboard/",
+    icon: (
+      <Linkedin
+        height={12}
+        width={12}
+        className="text-white group-hover:text-primary"
+      />
+    ),
+  },
+  {
+    href: "https://www.youtube.com/@ConnectEurope-0",
+    icon: (
+      <FaYoutube size={12} className="text-white group-hover:text-primary" />
+    ),
+  },
+  {
+    href: "https://www.tiktok.com/@connecteurope25?lang=en",
+    icon: (
+      <FaTiktok size={12} className="text-white group-hover:text-primary" />
+    ),
+  },
+  {
+    href: "https://x.com/ConnectEurope0",
+    icon: (
+      <FaXTwitter size={12} className="text-white group-hover:text-primary" />
+    ),
+  },
+  {
+    href: "https://www.pinterest.com/ConnectEurope/",
+    icon: (
+      <FaPinterest size={12} className="text-white group-hover:text-primary" />
+    ),
+  },
 ];
 
 export default function Navbar() {
@@ -81,21 +140,6 @@ export default function Navbar() {
 
               <div className="h-full flex items-center justify-center">
                 <ul className="space-y-4 flex flex-col items-center">
-                  <div className="flex justify-center items-center">
-                    <div className="w-8 h-8 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center">
-                      <Facebook height={15} width={15} className="text-white" />
-                    </div>
-                    <div className="w-8 h-8 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center ml-2">
-                      <Instagram
-                        height={15}
-                        width={15}
-                        className="text-white"
-                      />
-                    </div>
-                    <div className="w-8 h-8 bg-heading p-2 rounded-full flex items-center hover:bg-primary duration-200 cursor-pointer justify-center ml-2">
-                      <Linkedin height={15} width={15} className="text-white" />
-                    </div>
-                  </div>
                   {navItem.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -107,6 +151,19 @@ export default function Navbar() {
                       </Link>
                     </li>
                   ))}
+                  <div className="flex justify-center items-center">
+                    {socialLinks.map((item, index) => (
+                      <a
+                        key={index}
+                        target="_blank"
+                        href={item.href}
+                        className={`w-7 h-7 bg-heading group p-2 rounded-md flex items-center hover:bg-white duration-200 cursor-pointer justify-center ${
+                          index !== 0 ? "ml-2" : ""
+                        }`}>
+                        {item.icon}
+                      </a>
+                    ))}
+                  </div>
                 </ul>
               </div>
             </motion.div>
