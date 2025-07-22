@@ -151,7 +151,7 @@ export default function Navbar() {
                       </Link>
                     </li>
                   ))}
-                  <div className="flex justify-center items-center">
+                  <div className="flex justify-center items-center mt-3">
                     {socialLinks.map((item, index) => (
                       <a
                         key={index}
