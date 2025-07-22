@@ -8,7 +8,6 @@ import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-
 import Link from "next/link";
 
 const navItem = [
@@ -123,7 +122,7 @@ export default function Navbar() {
               exit={{ x: -300 }}
               transition={{ type: "tween" }}
               className="fixed top-0 left-0 h-full w-[300px] bg-primary shadow-lg z-50 p-6">
-              <div className="flex justify-between items-center mb-8">
+              <div className="flex justify-between items-center mb-0">
                 {/* <h2 className="text-xl text-white font-semibold">Connect Europe</h2> */}
                 <Link href="/">
                   <Image
@@ -140,7 +139,7 @@ export default function Navbar() {
                 />
               </div>
 
-              <div className="h-full flex items-center justify-center">
+              <div className="h-full flex items-start mt-32 justify-center">
                 <ul className="space-y-4 flex flex-col items-center">
                   {navItem.map((item, index) => (
                     <li key={index}>

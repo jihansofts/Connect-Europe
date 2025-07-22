@@ -164,12 +164,12 @@ export default function ContactArea() {
                 <a
                   href="mailto:contact@connecteurope.agency"
                   className="text-[20px] text-primary">
-                  contact@connecteurope.agency
+                  contact@connecteurope.uk
                 </a>
               </address>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {socialLinks.map((item, index) => (
                 <a
                   key={index}
@@ -177,7 +177,7 @@ export default function ContactArea() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-10 h-10 bg-primary group p-2 rounded-md flex items-center hover:bg-heading duration-200 cursor-pointer justify-center ${
-                    index !== 0 ? "ml-2" : ""
+                    index !== 0 ? "ml-0" : ""
                   }`}>
                   {item.icon}
                 </a>
