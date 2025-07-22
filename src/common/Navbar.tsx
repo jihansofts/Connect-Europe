@@ -2,13 +2,15 @@
 import React, { useState } from "react";
 
 import { FaYoutube, FaTiktok, FaPinterest } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
+
 
 import Link from "next/link";
-import { FaXTwitter } from "react-icons/fa6";
+
 const navItem = [
   { name: "Home", link: "/" },
   { name: "About Us", link: "/about" },

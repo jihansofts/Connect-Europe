@@ -1,6 +1,39 @@
 import React from "react";
+
+import { FaYoutube, FaTiktok, FaPinterest } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/connectEurope.ag",
+    icon: <Facebook height={15} width={15} className="text-white " />,
+  },
+  {
+    href: "https://www.instagram.com/connecteurope3/",
+    icon: <Instagram height={15} width={15} className="text-white " />,
+  },
+  {
+    href: "https://www.linkedin.com/company/107184862/admin/dashboard/",
+    icon: <Linkedin height={15} width={15} className="text-white " />,
+  },
+  {
+    href: "https://www.youtube.com/@ConnectEurope-0",
+    icon: <FaYoutube size={15} className="text-white " />,
+  },
+  {
+    href: "https://www.tiktok.com/@connecteurope25?lang=en",
+    icon: <FaTiktok size={15} className="text-white " />,
+  },
+  {
+    href: "https://x.com/ConnectEurope0",
+    icon: <FaXTwitter size={15} className="text-white " />,
+  },
+  {
+    href: "https://www.pinterest.com/ConnectEurope/",
+    icon: <FaPinterest size={15} className="text-white " />,
+  },
+];
 export default function ContactArea() {
   return (
     <section className="py-20 bg-white">
@@ -136,44 +169,19 @@ export default function ContactArea() {
               </address>
             </div>
 
-            {/* Invoicing Data */}
-            {/* <div className="mt-20">
-              <h2 className="text-[24px] font-semibold text-heading ">
-                Invoicing data
-              </h2>
-              <div className="text-gray-700 space-y-5">
-                <p className="mt-4">
-                  <span className="font-bold">Name:</span> TRIGON Consulting
-                  s.r.o.
-                </p>
-                <p>
-                  <span className="font-bold mt-4">Address:</span> Kilary
-                  Janunkova | 2 | Banská Bystrica | 974 01 | Slovensko
-                </p>
-                <p>
-                  <span className="font-bold">VAT ID:</span> SK 2022519246
-                </p>
-                <p>
-                  <span className="font-bold">IČO:</span> 43932282
-                </p>
-              </div>
-            </div> */}
             <div className="flex items-center gap-4">
-              <div className="p-5 bg-primary rounded-full hover:bg-heading duration-200 cursor-pointer w-8 h-8 flex items-center justify-center">
-                <span className="">
-                  <Facebook className="w-5 h-5 text-white" />
-                </span>
-              </div>
-              <div className="p-5 bg-primary rounded-full hover:bg-heading duration-200 cursor-pointer w-8 h-8 flex items-center justify-center">
-                <span className="">
-                  <Linkedin className="w-5 h-5 text-white" />
-                </span>
-              </div>
-              <div className="p-5 bg-primary rounded-full hover:bg-heading duration-200 cursor-pointer w-8 h-8 flex items-center justify-center">
-                <span className="">
-                  <Instagram className="text-white" />
-                </span>
-              </div>
+              {socialLinks.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-10 h-10 bg-primary group p-2 rounded-md flex items-center hover:bg-heading duration-200 cursor-pointer justify-center ${
+                    index !== 0 ? "ml-2" : ""
+                  }`}>
+                  {item.icon}
+                </a>
+              ))}
             </div>
           </div>
         </div>
