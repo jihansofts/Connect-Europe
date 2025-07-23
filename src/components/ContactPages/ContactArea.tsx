@@ -152,36 +152,61 @@ export default function ContactArea() {
               {/* <p className="text-[16px] text-gray-600">
                 Killary Janunkova 2 | Banská Bystrica | 97401 | Slovakia
               </p> */}
-              <address className="not-italic  cursor-pointer space-y-1 mt-20 ">
-                <p className="text-heading font-bold text-[20px]">
-                  📧Get in Touch
-                </p>
-                <p className="text-[16px] text-gray-600">
-                  {" "}
-                  Fill out the form below, and a member of our team will get
-                  back to you shortly.
-                </p>
-                <a
-                  href="mailto:contact@connecteurope.agency"
-                  className="text-[20px] text-primary">
-                  contact@connecteurope.uk
-                </a>
-              </address>
-            </div>
-
-            <div className="flex items-center gap-3">
-              {socialLinks.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-10 h-10 bg-primary group p-2 rounded-md flex items-center hover:bg-heading duration-200 cursor-pointer justify-center ${
-                    index !== 0 ? "ml-0" : ""
-                  }`}>
-                  {item.icon}
-                </a>
-              ))}
+              <div className="flex flex-col space-y-4 mt-6">
+                <address className="not-italic  cursor-pointer space-y-1 mt-20 ">
+                  <p className="text-heading font-bold text-[20px]">
+                    📧Get in Touch
+                  </p>
+                  <p className="text-[16px] text-gray-600">
+                    {" "}
+                    Fill out the form below, and a member of our team will get
+                    back to you shortly.
+                  </p>
+                  <a
+                    href="mailto:contact@connecteurope.agency"
+                    className="text-[20px] text-primary">
+                    contact@connecteurope.uk
+                  </a>
+                </address>
+                <address className="not-italic cursor-pointer space-y-1">
+                  <p className="text-heading font-bold text-[20px]">
+                    📞Call Us
+                  </p>
+                  <a
+                    href="tel:+421948123456"
+                    className="text-[20px] text-primary">
+                    +421 948 123 456
+                  </a>
+                </address>
+                <address className="not-italic cursor-pointer space-y-1">
+                  <p className="text-heading font-bold text-[20px]">
+                    📍Visit Head Office
+                  </p>
+                  <p className="text-[16px] text-gray-600">
+                    703 Hawker Court 5 Bolinder Way, London, United Kingdom, E3
+                    3UH
+                  </p>
+                </address>
+                <div>
+                  <p className="text-heading font-bold text-[20px]">
+                    Follow Us
+                  </p>
+                  <div className="flex items-center gap-3 mt-2">
+                    {socialLinks.map((item, index) => (
+                      <a
+                        key={index}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`w-10 h-10 bg-primary group p-2 rounded-md flex items-center hover:bg-heading duration-200 cursor-pointer justify-center ${
+                          index !== 0 ? "ml-0" : ""
+                        }`}>
+                        {item.icon}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
