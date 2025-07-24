@@ -14,6 +14,7 @@ const tabs = ["I need an employee", "I need Workers"];
 //   report: string;
 //   consent: boolean;
 // }
+
 export default function InputModal() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { isOpen, closeModel } = useInputModel();

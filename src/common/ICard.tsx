@@ -8,6 +8,7 @@ type CardProps = {
   timeToFill: string;
   backText: string;
 };
+
 export default function ICard({
   title,
   icon,
