@@ -217,7 +217,7 @@ export default function ContactArea() {
                 </address>
                 <address className="not-italic cursor-pointer space-y-1">
                   <p className="text-heading font-bold text-[20px]">
-                    📍Dubai Office
+                    📍UAE Office
                   </p>
                   <p className="text-[16px] text-gray-600">
                     Al Ittihad St - Hay Al Nahda - Sharjah - United Arab
