@@ -208,7 +208,7 @@ export default function ContactArea() {
                 </address>
                 <address className="not-italic cursor-pointer space-y-1">
                   <p className="text-heading font-bold text-[20px]">
-                    📍Visit Head Office
+                    📍UK (Head) Office
                   </p>
                   <p className="text-[16px] text-gray-600">
                     703 Hawker Court 5 Bolinder Way, London, United Kingdom, E3
@@ -217,7 +217,7 @@ export default function ContactArea() {
                 </address>
                 <address className="not-italic cursor-pointer space-y-1">
                   <p className="text-heading font-bold text-[20px]">
-                    📍Visit Office
+                    📍Dubai Office
                   </p>
                   <p className="text-[16px] text-gray-600">
                     Al Ittihad St - Hay Al Nahda - Sharjah - United Arab
@@ -226,7 +226,7 @@ export default function ContactArea() {
                 </address>
                 <address className="not-italic cursor-pointer space-y-1">
                   <p className="text-heading font-bold text-[20px]">
-                    📍Visit Office
+                    📍Dhaka Office
                   </p>
                   <p className="text-[16px] text-gray-600">
                     Block-B, House #5, Road-2, Dhaka 1216, Mirpur-10, Bangladesh
