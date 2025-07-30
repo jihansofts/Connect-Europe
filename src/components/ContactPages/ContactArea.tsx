@@ -40,9 +40,9 @@ export default function ContactArea() {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const serviceID = "service_v98mqhl";
-    const templateID = "template_52n0f0f";
-    const userID = "BEN35ODGKLGTsVqJE";
+    const serviceID = "service_2240l9s";
+    const templateID = "template_ksx7o99";
+    const userID = "jKcEkgd1dwWX8suxQ";
     if (!formRef.current) return;
 
     emailjs.sendForm(serviceID, templateID, formRef.current, userID).then(

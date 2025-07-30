@@ -48,9 +48,9 @@ export default function InputModal() {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
-    const serviceID = "service_v98mqhl";
-    const templateID = "template_52n0f0f";
-    const userID = "BEN35ODGKLGTsVqJE";
+    const serviceID = "service_2240l9s";
+    const templateID = "template_ksx7o99";
+    const userID = "jKcEkgd1dwWX8suxQ";
 
     try {
       const emailParams = {
