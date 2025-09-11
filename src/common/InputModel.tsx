@@ -87,6 +87,7 @@ export default function InputModal() {
     <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
       <div className="bg-white rounded-xl lg:mr-0 md:mr-0 sm:mr-5 mr-20 shadow-lg w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-3xl px-5 sm:px-10 md:px-10 py-8 sm:py-12 relative overflow-y-auto max-h-[90vh]">
         <button
+          title="close"
           onClick={closeModel}
           className="absolute cursor-pointer top-3 right-4 text-xl">
           <X />
