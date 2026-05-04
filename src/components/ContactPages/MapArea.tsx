@@ -4,7 +4,7 @@ import React from "react";
 export default function MapArea() {
   return (
     <section className="bg-white py-20">
-      <div className="container max-w-7xl mx-auto">
+      <div className="container max-w-7xl mx-auto px-4 lg:px-0">
         <div className="flex flex-col gap-y-5 ">
           <div className="w-full h-[400px] my-10">
             <span className="text-[24px] text-primary font-bold font-sans mb-5">

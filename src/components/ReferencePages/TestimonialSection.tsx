@@ -205,9 +205,9 @@ export default function TestimonialSection() {
   };
   return (
     <section className="bg-white py-20">
-      <div className="container mx-auto w-7xl">
+      <div className="container mx-auto max-w-7xl p-1">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 p-8 "
+          className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

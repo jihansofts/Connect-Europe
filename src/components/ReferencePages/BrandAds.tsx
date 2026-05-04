@@ -35,7 +35,7 @@ const itemVariants = {
 export default function BrandAds() {
   return (
     <section className="bg-white py-20">
-      <div className="container w-7xl mx-auto">
+      <div className="container max-w-7xl mx-auto px-4 lg:px-0">
         <motion.div
           className="grid grid-cols-3 md:grid-cols-5 gap-6 items-center"
           variants={containerVariants}
