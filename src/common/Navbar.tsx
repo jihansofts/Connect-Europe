@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 
-import { FaYoutube, FaTiktok, FaPinterest } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
+import { FaYoutube } from "react-icons/fa";
+// import { FaXTwitter } from "react-icons/fa6";
+import { Menu, X, Facebook } from "lucide-react";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
